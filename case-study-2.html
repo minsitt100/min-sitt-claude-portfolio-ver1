@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Curiocity — Simplifying Financial Analyst Workflows | Min Sitt</title>
+  <meta name="description" content="Designing a productivity tool that centralizes report writing and resource organization on one screen." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav" role="navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Min Sitt</a>
+      <div class="nav-links">
+        <a href="index.html#work" class="active">Work</a>
+        <a href="mailto:minsittaung@gmail.com">Contact</a>
+        <a href="https://www.linkedin.com/in/minsittaung" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" role="menu">
+      <a href="index.html#work" role="menuitem">Work</a>
+      <a href="mailto:minsittaung@gmail.com" role="menuitem">Contact</a>
+      <a href="https://www.linkedin.com/in/minsittaung" target="_blank" rel="noopener" role="menuitem">LinkedIn</a>
+    </div>
+  </nav>
+
+  <main class="cs-page">
+    <div class="container">
+
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M11 7H3M3 7L7 3M3 7L7 11" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        All Work
+      </a>
+
+      <p class="cs-eyebrow">Case Study &mdash; 02</p>
+      <h1 class="cs-title">Simplifying Financial Analysts Workflows</h1>
+      <p class="cs-subtitle">Designing a productivity tool that centralizes report writing and resource organization on one screen.</p>
+
+      <div class="cs-meta-strip">
+        <div class="cs-meta-pill">
+          <span class="pill-label">Role</span>
+          <span class="pill-sep"></span>
+          <span class="pill-value">Product Design Intern</span>
+        </div>
+        <div class="cs-meta-pill">
+          <span class="pill-label">Timeline</span>
+          <span class="pill-sep"></span>
+          <span class="pill-value">Jun 2024 &ndash; Aug 2024</span>
+        </div>
+        <div class="cs-meta-pill">
+          <span class="pill-label">Team</span>
+          <span class="pill-sep"></span>
+          <span class="pill-value">Will Breen, Min Sitt Aung</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thumbnail / Hero Image -->
+    <div class="container">
+      <div class="cs-hero-image">
+        <div class="grad-curiocity cs-hero-image-placeholder">
+          <!-- Replace with: <img src="assets/images/curiocity-thumbnail.jpg" alt="Curiocity case study thumbnail" /> -->
+          Thumbnail Photo
+        </div>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="container">
+      <div class="cs-body">
+
+        <!-- ===== PROJECT OVERVIEW ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Project Overview</p>
+          <h3>Company Context</h3>
+          <p>Curiocity aims to enhance the workflow of analysts engaging in extensive research and report writing.</p>
+          <h3>Problem</h3>
+          <p>Analysts across a variety of industries have an inefficient workflow characterized by constant back and forth: they have to find their sources nestled in a variety of folders and hubs, come back to their document where the report is, and repeat this process until completion.</p>
+          <h3>Outcome</h3>
+          <p>After interviewing 20+ users, I shipped a functional prototype that I presented to the CEO to use for funding.</p>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 1: USER RESEARCH & PAIN POINTS ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">User Research</p>
+          <h2>The current research report writing process is frustrating and tedious for analysts.</h2>
+          <p>From my initial conversations with 20 analysts in industries ranging from marketing to finance, I discovered 3 major pain points:</p>
+          <ol>
+            <li><strong>Heavy Research Workload:</strong> Analysts manage a vast amount of reference material for report writing, with each report involving between hundreds of documents and URLs.</li>
+            <li><strong>Outdated Management Tools:</strong> Analysts typically rely on browser bookmarks and Excel files to track these resources, which proves to be time-consuming and inefficient.</li>
+            <li><strong>Distraction from Core Tasks:</strong> Labeling, sorting, and organizing research materials creates significant overhead, detracting time away from analysis.</li>
+          </ol>
+          <p>This creates an inefficient workflow characterized by constant back-and-forth: analysts write their report, realize they need to include something they previously saw, then search for the original source.</p>
+          <p>From there, I formed my guiding "how might we" question:</p>
+          <div class="cs-callout">
+            <blockquote>How might we design a cohesive, integrated tool that can streamline the extraction and management of sources to make report writing more efficient and less burdensome?</blockquote>
+          </div>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 2: COMPETITIVE ANALYSIS ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Competitive Analysis</p>
+          <h2>I first looked at what analysts currently used for their workflows to identify trends across preferred tools.</h2>
+          <p>First, I sought to better understand the value propositions of existing tools for analysts to narrow down on how Curiocity could differentiate itself and stand out. There are 3 main categories these tools fall under:</p>
+        </div>
+
+        <!-- Image: Tool categories -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            Competitive Analysis — Tool Categories
+            <!-- Replace with: <img src="assets/images/curiocity-competitive.jpg" alt="Competitive analysis tool categories" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <p>From a deep dive exploration, I identified common value propositions across these categories:</p>
+          <ol>
+            <li><strong>Content Aggregation:</strong> The ability to efficiently extract high-quality key insights from uploaded resources is a critical requirement.</li>
+            <li><strong>Report Writing:</strong> Online/offline editing and storing in-progress/completed reports on a centralized homepage.</li>
+            <li><strong>Resource Management:</strong> Flexible options to sort, filter, and tag large files are vital for effective organization and usability.</li>
+          </ol>
+          <p>Combining these capabilities onto one platform is what Curiocity should aim to achieve!</p>
+        </div>
+
+        <!-- ===== SECTION 3: PRODUCT CONCEPTS & UX MAP ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Product Concepts</p>
+          <h2>After identifying pain points and evaluating existing tools, I began mapping out product concepts and the user experience.</h2>
+          <p>By this point, the CEO had already worked on some initial wireframes and we had a sync to discuss them.</p>
+        </div>
+
+        <!-- Image: CEO wireframes -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            Initial CEO Wireframes
+            <!-- Replace with: <img src="assets/images/curiocity-ceo-wireframes.jpg" alt="Initial CEO wireframes" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>Why did we not go with this version?</h3>
+          <p>We decided against this version because it felt unintuitive. The report-writing section was envisioned like building website blocks, where users could add new text blocks as needed for writing paragraphs, but this created a messy layout that lacked a clean streamlined look that analysts would be familiar with.</p>
+          <p>Shortly after the discussion, I revisited the drawing board to develop a user experience journey map, strategically outlining core features and interactions which laid the foundation for the next design iteration.</p>
+        </div>
+
+        <!-- Image: User journey map -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            User Experience Journey Map
+            <!-- Replace with: <img src="assets/images/curiocity-journey-map.jpg" alt="User experience journey map" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <p>This is also where I began thinking about how to simplify the process of report writing and file organization. I landed on a split-screen setup: the left side dedicated to writing, and the right side for managing files. This allowed users to filter and manipulate files without disrupting their writing flow, keeping everything seamlessly updated. With the core flows outlined, a new version of Curiocity was ready to be brought to life.</p>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 4: HOMEPAGE ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Homepage Design</p>
+          <h2>I began designing a version of Curiocity to empower users by making their workflows more efficient and intuitive, starting with the home page.</h2>
+          <h3>Home Page</h3>
+          <p>Introduces the split-screen concept: report-writing on the left, file organization on the right. Users can manipulate and interact with either side&mdash;for instance, creating new reports, filtering files, and editing content&mdash;without affecting the other.</p>
+        </div>
+
+        <!-- Image: Homepage -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            Homepage — Split-Screen Design
+            <!-- Replace with: <img src="assets/images/curiocity-homepage.jpg" alt="Curiocity homepage split-screen design" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>Why this design?</h3>
+          <p>This allows users to manipulate and interact with either side&mdash;for instance, creating new reports, filtering files, and editing content&mdash;without affecting the other. They can switch workflows without disruption, unlike current tools.</p>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 5: REPORT MANAGEMENT ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Report Management</p>
+          <h2>I designed the report management experience to mirror the structure and flow of commonly used writing tools.</h2>
+          <h3>(1 of 3) Create a Report</h3>
+          <p>Users begin the flow by clicking the prominently placed '+' button at the center, designed to guide them seamlessly into the experience.</p>
+        </div>
+
+        <!-- Image: Create report step 1 -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            Create a Report — Step 1 of 3
+            <!-- Replace with: <img src="assets/images/curiocity-report-step1.jpg" alt="Create a report step 1" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>(2 of 3) Create a Report</h3>
+          <p>User enters the title of their report with the option of doing this later.</p>
+        </div>
+
+        <!-- Image: Create report step 2 -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            Create a Report — Step 2 of 3
+            <!-- Replace with: <img src="assets/images/curiocity-report-step2.jpg" alt="Create a report step 2" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>(3 of 3) Create a Report</h3>
+          <p>User is presented with a blank report and typical editing options to begin writing!</p>
+        </div>
+
+        <!-- Image: Create report step 3 -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            Create a Report — Step 3 of 3
+            <!-- Replace with: <img src="assets/images/curiocity-report-step3.jpg" alt="Create a report step 3" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>Why this design?</h3>
+          <p>I wasn't trying to reinvent the wheel&mdash;instead, I took inspiration from familiar tools like Google Docs and Microsoft Word to mirror their user experience. Since our target users were already comfortable with these platforms, I aimed to minimize onboarding friction and reduce the time it would take to get up to speed with our tool.</p>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 6: FILE ORGANIZATION ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">File Organization</p>
+          <h2>Analysts work with a high volume of files, so I focused on making it easy for them to quickly sort, find, and utilize relevant and specific documents.</h2>
+          <h3>Search for Files</h3>
+          <p>Users can search for specific keywords and see the most relevant results, with the matched terms clearly highlighted in the file names. The 'Drive' area also dynamically updates to display the corresponding files.</p>
+        </div>
+
+        <!-- Image: Search -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            File Search — Keyword Highlighting
+            <!-- Replace with: <img src="assets/images/curiocity-search.jpg" alt="File search with keyword highlighting" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>Why this design?</h3>
+          <p>By adding this functionality and experience to the search, users can find the files they need faster and with less friction.</p>
+          <h3>Filtering</h3>
+          <p>By pressing the funnel icon, the user is presented with options on how to find files such as sorting alphabetically, files that include or exclude terms, file type, and date range.</p>
+        </div>
+
+        <!-- Image: Filtering -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            File Filtering — Filter Options
+            <!-- Replace with: <img src="assets/images/curiocity-filter.jpg" alt="File filtering options" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>Filtering if a File is Currently Opened</h3>
+          <p>When a user opens a file, the original filter location is replaced by other files in their directory. To address this, I designed a dedicated filter modal specifically for this state.</p>
+        </div>
+
+        <!-- Image: Filtering with file open -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            Filtering — Dedicated Modal (File Open State)
+            <!-- Replace with: <img src="assets/images/curiocity-filter-modal.jpg" alt="Filter modal when a file is open" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>Selecting a File</h3>
+          <p>When a user selects a file, they are presented with key information such as tags, title, and a quick preview.</p>
+        </div>
+
+        <!-- Image: Selecting a file -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            File Selection — Key Info Preview
+            <!-- Replace with: <img src="assets/images/curiocity-file-select.jpg" alt="File selection with key info preview" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>Why this design?</h3>
+          <p>Filtering is the primary tool users rely on to sift through their large volume of files, so I designed it to be accessible at all times&mdash;rather than limiting it to a specific view or state. Additionally, each file displays key information even after filtering, adding another layer of context to help users quickly determine relevance and refine their search as needed.</p>
+          <h3>Original File vs. Summary View</h3>
+          <p>When a user opens a file they are able to toggle between two views: Original File and Summary. Original File shows the full file embedded directly in Curiocity and can be manipulated. Summary View showcases condensed AI summaries of the report that the user can directly reference while they are writing.</p>
+        </div>
+
+        <!-- Images: Original file vs summary (2 views) -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            Original File View
+            <!-- Replace with: <img src="assets/images/curiocity-original-view.jpg" alt="Original file view" /> -->
+          </div>
+        </div>
+
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            Summary View — AI-Condensed Notes
+            <!-- Replace with: <img src="assets/images/curiocity-summary-view.jpg" alt="Summary view with AI condensed notes" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>Why this design?</h3>
+          <p>This design was created to enhance productivity by reducing the need to switch between multiple windows or tabs. By allowing users to simultaneously view the full document and a concise summary, it helps them focus on writing while easily referencing essential information&mdash;streamlining the workflow and minimizing cognitive load.</p>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 7: PROTOTYPE DELIVERY ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Prototype Delivery</p>
+          <h2>With the screens complete, I prototyped everything and shipped the MVP to the CEO!</h2>
+          <p>Below is the full walkthrough of the prototype I sent:</p>
+        </div>
+
+        <!-- Video placeholder -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-curiocity image-placeholder">
+            Prototype Walkthrough — Video Recording
+            <!-- Replace with: <video src="assets/videos/curiocity-prototype.mp4" controls /> or embed link -->
+          </div>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 8: WHAT I'D DO DIFFERENTLY ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Learnings</p>
+          <h2>There were a couple of things I would do differently with more time.</h2>
+          <h3>User Research to Iterate on Designs</h3>
+          <p>Due to the short time frame and the nature of my involvement, the goal was to quickly build an MVP rather than conduct extended user research or multiple iterations. Since I wasn't going to remain on the team long term, the client preferred that I focus on delivering a functional proof of concept that their team could build upon after my departure.</p>
+          <h3>Collaborating with Engineering</h3>
+          <p>While I didn't have the opportunity to work with engineers for this project, a process I would like to add would be to showcase my designs to them early on to ensure I am blending creativity with feasibility and functionality.</p>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 9: REFLECTION ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Reflection</p>
+          <h2>Curiocity was the first project where I saw a product vision take shape through my design.</h2>
+          <p>Starting with a blank canvas gave me the creative freedom to shape the design from the ground up. It also pushed me to further develop my skills in Figma, especially with advanced features like animations, such as creating a loading screen! This project not only strengthened my design skills but also honed my strategic thinking to come up with features for the product to achieve its goal. It was an exciting and incredibly rewarding learning experience, and I look forward to applying these lessons to future projects!</p>
+        </div>
+
+        <!-- Case Study Navigation -->
+        <nav class="cs-nav" aria-label="Case study navigation">
+          <a href="case-study-1.html" class="cs-nav-card">
+            <p class="cs-nav-dir">&larr; Previous Project</p>
+            <p class="cs-nav-title">STP — Designing for High Stake Environments</p>
+          </a>
+          <span></span>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-name">Min Sitt</span>
+          <span class="footer-tagline">Product Strategist &amp; Designer</span>
+        </div>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="mailto:minsittaung@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/minsittaung" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+        <span class="footer-copy">&copy; 2025 Min Sitt</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

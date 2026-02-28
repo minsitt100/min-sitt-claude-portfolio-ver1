@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>STP — Designing for High Stake Environments | Min Sitt</title>
+  <meta name="description" content="How might we design an app that users can navigate safely and efficiently during high-pressure situations?" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav" role="navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Min Sitt</a>
+      <div class="nav-links">
+        <a href="index.html#work" class="active">Work</a>
+        <a href="mailto:minsittaung@gmail.com">Contact</a>
+        <a href="https://www.linkedin.com/in/minsittaung" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" role="menu">
+      <a href="index.html#work" role="menuitem">Work</a>
+      <a href="mailto:minsittaung@gmail.com" role="menuitem">Contact</a>
+      <a href="https://www.linkedin.com/in/minsittaung" target="_blank" rel="noopener" role="menuitem">LinkedIn</a>
+    </div>
+  </nav>
+
+  <main class="cs-page">
+    <div class="container">
+
+      <a href="index.html" class="back-link">
+        <svg viewBox="0 0 14 14" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M11 7H3M3 7L7 3M3 7L7 11" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        All Work
+      </a>
+
+      <p class="cs-eyebrow">Case Study &mdash; 01</p>
+      <h1 class="cs-title">Designing for high-stake environments</h1>
+      <p class="cs-subtitle">How might we design an app that users can navigate safely and efficiently during high-pressure situations?</p>
+
+      <div class="cs-meta-strip">
+        <div class="cs-meta-pill">
+          <span class="pill-label">Role</span>
+          <span class="pill-sep"></span>
+          <span class="pill-value">Product Designer Intern</span>
+        </div>
+        <div class="cs-meta-pill">
+          <span class="pill-label">Type</span>
+          <span class="pill-sep"></span>
+          <span class="pill-value">Client Work</span>
+        </div>
+        <div class="cs-meta-pill">
+          <span class="pill-label">Timeline</span>
+          <span class="pill-sep"></span>
+          <span class="pill-value">Oct 2024 &ndash; Nov 2024</span>
+        </div>
+        <div class="cs-meta-pill">
+          <span class="pill-label">Team</span>
+          <span class="pill-sep"></span>
+          <span class="pill-value">Will Breen, Min Sitt Thu Aung</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Thumbnail / Hero Image -->
+    <div class="container">
+      <div class="cs-hero-image">
+        <div class="grad-stp cs-hero-image-placeholder">
+          <!-- Replace with: <img src="assets/images/stp-thumbnail.jpg" alt="STP case study thumbnail" /> -->
+          Thumbnail Photo
+        </div>
+      </div>
+    </div>
+
+    <!-- Body -->
+    <div class="container">
+      <div class="cs-body">
+
+        <!-- ===== PROJECT OVERVIEW ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Project Overview</p>
+          <h3>My Role</h3>
+          <p>Sole UI/UX Designer responsible for all deliverables after regular manager review and refinements.</p>
+          <h3>Company Context</h3>
+          <p>Sexual-Traffic Prevention (STP) empowers individuals to take control of their safety by identifying secure locations, delivering real-time safety updates, and location tracking.</p>
+          <h3>Problem</h3>
+          <p>STP was created to solve the growing challenge of personal safety in unpredictable environments, where real-time information is often fragmented or inaccessible. The app would need to allow users to quickly and reliably seek safety in any situations they find themselves in.</p>
+          <h3>Result</h3>
+          <p>A fully interactive prototype was developed and sent to the client. The prototype helped the client secure additional funding, which in turn allowed Arrow North to establish another contract project for developing their web application.</p>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 1: CLIENT SKETCHES ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Starting Point</p>
+          <h2>The client first provided sketches of their initial vision for me to base my design around.</h2>
+          <p>To begin the project, STP sent me a set of wireframes to base my design off of. In these wireframes were the two core features they wanted to implement&mdash;"Follow Me" &amp; "Safe Place"&mdash;that would be the backbone of their product.</p>
+          <p>Below is a quick distinction between the two features. The icons are what I used to represent the features as you will see in the coming designs!</p>
+
+          <!-- Feature Cards — Apple Liquid Glass -->
+          <div class="cs-feature-grid">
+            <div class="cs-feature-card">
+              <div class="cs-feature-card-icon">
+                <!-- Replace with Follow Me feature icon -->
+                📍
+              </div>
+              <h4>"Follow Me" Feature</h4>
+              <p>Track user's location as they route to a selected safe location.</p>
+            </div>
+            <div class="cs-feature-card">
+              <div class="cs-feature-card-icon">
+                <!-- Replace with Safe Place feature icon -->
+                🛡️
+              </div>
+              <h4>"Safe Place" Feature</h4>
+              <p>Look for areas with high crowd activity that are near the user's location.</p>
+            </div>
+          </div>
+
+          <p>With minimal documentation and only the core concept provided, I embraced the challenge of fleshing these wireframes into a fully-fledged product!</p>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 2: USE CASES & HMW ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Research &amp; Use Cases</p>
+          <h2>I used early wireframes to map out real-world use cases and define what STP needed to solve.</h2>
+          <p>While the project's financial constraints limited the ability to conduct extensive user research, I created realistic user scenarios to guide my design&mdash;focusing on situations where someone would turn to STP for support. Based on the wireframes, I came up with several use cases for STP with a couple of them below:</p>
+          <ol>
+            <li>User is walking alone at night and notices that someone is following them.</li>
+            <li>User witnesses a violent incident and wants to report details safely and quickly.</li>
+            <li>User is in an unfamiliar area and wants to check where the safe zones nearest to them are.</li>
+          </ol>
+          <p>From these scenarios, it was clear that the users of STP are likely in heightened emotional states where fear and urgency influence their interactions.</p>
+          <p>From there, I formed my guiding "how might we" question to design:</p>
+          <div class="cs-callout">
+            <blockquote>How might we ensure STP empowers users to find safety quickly when they need it most?</blockquote>
+          </div>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 3: USER JOURNEY ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">User Journey</p>
+          <h2>With the problem defined, I developed a user experience map to outline how users would interact with STP's key features.</h2>
+          <p>The user journey map was expanded upon the initial documentation by fleshing out interactions within the "Follow Me" and "Safe Place" features, as well as the "Report" system for users to report incidents. This also allowed me to present to the client what options the user has at any specific point in the app they may find themselves in. For instance, when a user is in "Follow Me" or "Safe Place", the journey shows they can call or chat with emergency contacts as they are routing for additional reassurance.</p>
+          <p>By developing this user journey, I ensured that the client and I were aligned on our vision for STP. After getting approval, I went ahead into creating high-fidelity wireframes.</p>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 4: HOMEPAGE ITERATIONS ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Homepage Iterations</p>
+          <h2>Starting with the home page, I went through several iterations&hellip;</h2>
+          <p>I experimented with multiple homepage layouts, followed by further iterations on each one. I played around with different versions of how the "Report" system would be represented, horizontal versus vertical layouts, color, and sizing of specific elements. Below are a couple of the options I went through:</p>
+          <h3>Option 1: News Feed Format</h3>
+          <p>Reports are presented in a vertical news feed format.</p>
+        </div>
+
+        <!-- Image: Option 1 — News Feed -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-stp image-placeholder">
+            Homepage Option 1 — News Feed Format
+            <!-- Replace with: <img src="assets/images/stp-home-option1.jpg" alt="Homepage option 1 news feed format" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>Option 2: Interactive Map</h3>
+          <p>An interactive map would showcase the reports made by other users in the area, that could then be clicked upon.</p>
+        </div>
+
+        <!-- Image: Option 2 — Interactive Map -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-stp image-placeholder">
+            Homepage Option 2 — Interactive Map
+            <!-- Replace with: <img src="assets/images/stp-home-option2.jpg" alt="Homepage option 2 interactive map" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>Option 3: Horizontal Layout</h3>
+          <p>Reports are accessible through a horizontal scroll. Follow Me and Safe Place features would also be presented in a horizontal format and take up more space.</p>
+        </div>
+
+        <!-- Image: Option 3 — Horizontal Layout -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-stp image-placeholder">
+            Homepage Option 3 — Horizontal Layout
+            <!-- Replace with: <img src="assets/images/stp-home-option3.jpg" alt="Homepage option 3 horizontal layout" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <p>After reflection and discussions with the client, I decided to emphasize quick access to the "Follow Me" and "Safe Place" features, as they are the primary active safety tools for users. These features should occupy prominent space on the home page and be easily accessible to ensure users can engage them quickly.</p>
+          <p>This lead me to go forward with an iterated version of Option 2:</p>
+        </div>
+
+        <!-- Image: Homepage Final Design -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-stp image-placeholder">
+            Homepage — Final Iterated Design
+            <!-- Replace with: <img src="assets/images/stp-home-final.jpg" alt="Homepage final iterated design" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>Why This Design?</h3>
+          <ul>
+            <li><strong>"Follow Me" &amp; "Safe Place" Button Size &amp; Accessibility:</strong> I took the decision to remove the nav bar in this design to create more space for the "Follow Me" &amp; "Safe Place" buttons, which made them easy for the user to see in a high-pressure situation. This also made the buttons the lowest point they could be on the screen, allowing them to be within the thumb's natural reach&mdash;optimizing them for easy and quick tapability.</li>
+            <li><strong>Map Integration provided an informative overview of incidents in relation to the user:</strong> Users have a much easier time getting information on where crime &amp; incidents are located in relation to them in the map as opposed to a newsfeed of articles. This version also provides the user a non-committal way (they wouldn't need to activate "Follow Me" or "Safe Place") to assess safety quickly.</li>
+            <li><strong>Typography Lift:</strong> The previous font felt robotic and difficult to read, so I switched to Roboto as it had less sharp edges for easier readability. I kept this change consistent for the rest of the screens, but the experimentation came in this home page, hence why I mention it here.</li>
+          </ul>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 5a: FOLLOW ME & SAFE PLACE ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Feature Design</p>
+          <h2>Keeping the guiding question in mind, I prioritized reliability and ease of use in the design of "Follow Me" &amp; "Safe Place".</h2>
+          <p>"Follow Me" and "Safe Place" are core features designed for when users feel under threat. Thus, my priority was to ensure they could take necessary actions in three clicks or fewer, allowing them to focus on their safety.</p>
+          <p>The three simple actions are: selecting "Follow Me" or "Safe Place," confirming a location, and initiating the route while authorities track their location.</p>
+        </div>
+
+        <!-- Image: Feature overview -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-stp image-placeholder">
+            Follow Me &amp; Safe Place — Feature Overview
+            <!-- Replace with: <img src="assets/images/stp-feature-overview.jpg" alt="Follow Me and Safe Place feature overview" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <p>The designs maintained this 3-click process, but also went through a couple of iterations before we landed on our final one.</p>
+          <h3>Version 1: Map &amp; Commands Sectioned Off</h3>
+          <p>In the first iteration, I mimicked the initial wireframes I had for this concept, which was a map sectioned off at the bottom with the safety commands.</p>
+        </div>
+
+        <!-- Image: Feature Version 1 -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-stp image-placeholder">
+            Follow Me / Safe Place — Version 1
+            <!-- Replace with: <img src="assets/images/stp-feature-v1.jpg" alt="Feature design version 1 map and commands sectioned off" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>Version 2: Expanded Map</h3>
+          <p>In the second iteration, I expanded the map to cover over half the screen, reserving the bottom for key functions (chat, call, confirm safety). I enlarged icons, added a background overlay for clarity, and refined typography to match the Home Page.</p>
+        </div>
+
+        <!-- Image: Feature Version 2 -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-stp image-placeholder">
+            Follow Me / Safe Place — Version 2
+            <!-- Replace with: <img src="assets/images/stp-feature-v2.jpg" alt="Feature design version 2 expanded map" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>Version 3: Map Now Acquires the Whole Screen</h3>
+          <p>My last explorations included fully expanding the map and placing the functional buttons in a side panel for a different perspective, and also a version with an instructional pop-up to help users conduct their next steps faster.</p>
+          <p>After several iterations and discussions with the client, I advocated for the map to take up as much screen as possible, as it serves as the core of the user experience: enabling users to easily adjust their routes, locate nearby safe places, and navigate seamlessly in real time.</p>
+          <p>This lead me to go forward with an iterated version of Version 3:</p>
+        </div>
+
+        <!-- Image: Feature Final Design -->
+        <div class="cs-image-full fade-up">
+          <div class="grad-stp image-placeholder">
+            Follow Me / Safe Place — Final Design
+            <!-- Replace with: <img src="assets/images/stp-feature-final.jpg" alt="Feature design final version full screen map" /> -->
+          </div>
+        </div>
+
+        <div class="cs-section fade-up">
+          <h3>How did this design promote ease of access &amp; reliability?</h3>
+          <ul>
+            <li><strong>Full Map Layout Provides Users With Greater Clarity and Control:</strong> A full-screen map provides users with a clear, uninterrupted view of their surroundings, allowing them to assess their environment, spot nearby safe zones&mdash;including those in the direction they're headed&mdash;and quickly adjust their route as needed. This visibility is essential for making fast, confident decisions in high-pressure situations.</li>
+            <li><strong>Clear Call-to-Action Instructions:</strong> The instructions at the top of the screen allow the user to know exactly what they need to do (Select a Safe Place) to quickly move onto the next step and get to safety.</li>
+            <li><strong>Confirmation Pop-ups Add A Layer of Security:</strong> This ensures the user doesn't make any accidental decisions about their current status, and that they will only do so once they are actually safe.</li>
+          </ul>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 5b: REPORT SYSTEM ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Report System</p>
+          <h2>The final aspect of STP left to tackle was building a community-focused report system.</h2>
+          <p>With the core features designed, the report system was the final element to address. Since we opted for an interactive homepage layout, a separate page needed to be created for the newsfeed-style report layout envisioned by the client. This approach aimed to make the system more community-focused, enabling users to engage and interact with one another to keep each other safe.</p>
+          <p>In Home Page Option 2, we incorporated a report feed accompanied by an image of the crime scene to serve as a visualization. However, the client indicated they might not have the technology to support this feature, so I made adjustments and developed the report system into the following design:</p>
+          <h3>Final Version: Report Feed &amp; Threads</h3>
+          <p>Key information about the incident is presented and users can tap the specific incident to learn more about it.</p>
+          <h3>Report Submission</h3>
+          <p>Pressing the "Create Report" button on the Home Page will bring a series of prompts that the user can type in to note the details of any suspicious activity.</p>
+          <h3>How did this design promote community?</h3>
+          <ul>
+            <li><strong>Building Shared Awareness Through Reporting:</strong> When users report suspicious activity, unsafe areas, or incidents, they contribute to a shared pool of real-time information that others in the area can benefit from. This fosters a sense of collective responsibility and vigilance.</li>
+            <li><strong>Enabling Localized, Context-Aware Safety:</strong> Reports reflect the on-the-ground reality in a specific area, making safety insights more personalized and accurate than broad institutional alerts.</li>
+          </ul>
+        </div>
+
+        <hr class="cs-divider" />
+
+        <!-- ===== SECTION 6: FINAL DELIVERY ===== -->
+        <div class="cs-section fade-up">
+          <p class="cs-section-label">Outcome</p>
+          <h2>I delivered the final designs, and the client was so satisfied they wanted to extend their work with Arrow North for a web app!</h2>
+          <p>Unfortunately, I can't show the full STP prototype due to NDA restrictions, but after sending the designs I received very positive feedback from the client and they were able to secure more funding as a result!</p>
+          <p>With new funding, Arrow North has recently restarted its partnership with STP for their Web App, which is meant to be more of an administrative app to manipulate how the mobile app and its users operate. It makes me thrilled that STP trusted me in my design process to continue helping deliver solutions that meet their evolving needs.</p>
+        </div>
+
+        <!-- Case Study Navigation -->
+        <nav class="cs-nav" aria-label="Case study navigation">
+          <a href="case-study-3.html" class="cs-nav-card">
+            <p class="cs-nav-dir">&larr; Previous Project</p>
+            <p class="cs-nav-title">NDA Client — Healthcare Diagnostics</p>
+          </a>
+          <a href="case-study-2.html" class="cs-nav-card next">
+            <p class="cs-nav-dir">Next Project &rarr;</p>
+            <p class="cs-nav-title">Curiocity — Simplifying Financial Analyst Workflows</p>
+          </a>
+        </nav>
+
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-name">Min Sitt</span>
+          <span class="footer-tagline">Product Strategist &amp; Designer</span>
+        </div>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="mailto:minsittaung@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/in/minsittaung" target="_blank" rel="noopener">LinkedIn</a>
+        </nav>
+        <span class="footer-copy">&copy; 2025 Min Sitt</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
