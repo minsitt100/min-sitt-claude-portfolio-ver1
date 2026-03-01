@@ -995,9 +995,19 @@ body::before {
 
 .img-caption {
   font-size: 13px;
+  font-style: italic;
   color: var(--text-tertiary);
   text-align: center;
   margin-top: 12px;
+}
+
+.cs-figure {
+  margin-top: 44px;
+  margin-bottom: 44px;
+}
+.cs-figure .cs-image-full {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* Feature cards — Apple Liquid Glass (used in STP case study) */
