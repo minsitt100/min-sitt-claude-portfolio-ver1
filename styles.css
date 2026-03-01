@@ -332,6 +332,115 @@ body::before {
 .btn-glass:active { transform: translateY(0) scale(0.99); }
 
 /* ============================================
+   HERO LAYOUT — Side by side
+   ============================================ */
+.hero-layout {
+  display: flex;
+  align-items: center;
+  gap: 72px;
+}
+
+.hero-content {
+  flex: 1;
+  min-width: 0;
+}
+
+/* ---- Photo column ---- */
+.hero-photo-col {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  animation: fadeUp 0.65s var(--ease) 0.4s both;
+}
+
+.hero-photo-wrap {
+  position: relative;
+}
+
+/* Outer glow ring — Liquid Glass style */
+.hero-photo-ring {
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  padding: 5px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.90) 0%,
+    rgba(255, 255, 255, 0.45) 40%,
+    rgba(255, 255, 255, 0.20) 100%
+  );
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.60),
+    0 8px 32px rgba(0, 0, 0, 0.10),
+    0 2px 8px rgba(0, 0, 0, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  transition: box-shadow var(--dur-slow) var(--ease);
+}
+
+.hero-photo-ring:hover {
+  box-shadow:
+    0 0 0 1px rgba(255, 255, 255, 0.75),
+    0 16px 48px rgba(0, 0, 0, 0.13),
+    0 4px 12px rgba(0, 0, 0, 0.07),
+    inset 0 1px 0 rgba(255, 255, 255, 0.95),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.04);
+}
+
+.hero-photo {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+}
+
+/* ---- Social icons ---- */
+.hero-socials {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.social-icon-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: var(--glass-inset), var(--shadow-sm);
+  color: var(--text-secondary);
+  transition: all var(--dur) var(--ease);
+}
+
+.social-icon-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.social-icon-btn:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(-2px) scale(1.06);
+  box-shadow: var(--glass-inset), var(--shadow-md);
+}
+
+.social-icon-btn:active {
+  transform: translateY(0) scale(0.97);
+}
+
+/* ============================================
    WORK SECTION
    ============================================ */
 .work {
@@ -990,6 +1099,27 @@ body::before {
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
 
+  .hero-layout {
+    flex-direction: column-reverse;
+    gap: 40px;
+    text-align: center;
+  }
+
+  .hero-greeting,
+  .hero-tagline,
+  .hero-roles {
+    text-align: center;
+  }
+
+  .hero-cta {
+    justify-content: center;
+  }
+
+  .hero-photo-ring {
+    width: 220px;
+    height: 220px;
+  }
+
   .projects-grid { grid-template-columns: 1fr; }
   .projects-grid .project-card:first-child,
   .projects-grid .project-card--wide { grid-column: auto; }
@@ -1011,10 +1141,16 @@ body::before {
   .nav-inner { padding: 12px 18px; }
 
   .hero { padding-top: 112px; padding-bottom: 72px; }
+  .hero-layout { gap: 32px; }
   .hero-greeting { font-size: 28px; }
   .hero-tagline  { font-size: 18px; }
   .hero-role-line { font-size: 16px; }
   .hero-role-line .role-label { font-size: 16px; }
+
+  .hero-photo-ring {
+    width: 180px;
+    height: 180px;
+  }
 
   .project-info { padding: 18px 20px; }
   .project-title { font-size: 17px !important; }
