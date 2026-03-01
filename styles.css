@@ -119,10 +119,9 @@ body::before {
 }
 
 .nav-logo {
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--text-primary);
+  display: block;
+  height: 38px;
+  width: auto;
 }
 
 .nav-links {
