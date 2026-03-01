@@ -97,38 +97,59 @@ body::before {
 .nav {
   position: fixed;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
   z-index: 1000;
-  width: calc(100% - 48px);
-  max-width: 860px;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
 }
 
-.nav-inner {
+/* Shared glass pill base */
+.nav-logo-pill,
+.nav-links-pill {
   background: var(--glass-bg-strong);
   backdrop-filter: var(--glass-blur-strong);
   -webkit-backdrop-filter: var(--glass-blur-strong);
   border: 1px solid var(--glass-border);
-  border-radius: var(--r-pill);
   box-shadow: var(--glass-inset), var(--shadow-lg);
-  padding: 14px 28px;
+  pointer-events: auto;
+  transition: box-shadow var(--dur) var(--ease);
+}
+
+/* Left: circular logo pill */
+.nav-logo-pill {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  transition: box-shadow var(--dur) var(--ease);
+  justify-content: center;
+  border-radius: 50%;
+  width: 72px;
+  height: 72px;
+  flex-shrink: 0;
 }
 
 .nav-logo {
   display: block;
-  height: 46px;
+  height: 38px;
   width: auto;
+}
+
+/* Right: links pill */
+.nav-links-pill {
+  border-radius: var(--r-pill);
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
 }
 
 .nav-links {
   display: flex;
   align-items: center;
   gap: 4px;
-  margin-left: auto;
 }
 
 .nav-links a {
@@ -187,6 +208,7 @@ body::before {
   flex-direction: column;
   gap: 2px;
   animation: menuIn 0.22s var(--ease) both;
+  pointer-events: auto;
 }
 .nav-mobile.open { display: flex; }
 .nav-mobile a {
@@ -1098,6 +1120,7 @@ body::before {
 @media (max-width: 960px) {
   .nav-links { display: none; }
   .nav-toggle { display: flex; }
+  .nav-links-pill { padding: 12px 14px; }
 
   .hero-layout {
     flex-direction: column-reverse;
@@ -1141,8 +1164,10 @@ body::before {
 @media (max-width: 600px) {
   .container { padding: 0 20px; }
 
-  .nav { width: calc(100% - 32px); top: 14px; }
-  .nav-inner { padding: 12px 18px; }
+  .nav { top: 14px; padding: 0 16px; }
+  .nav-logo-pill { width: 60px; height: 60px; }
+  .nav-logo { height: 32px; }
+  .nav-links-pill { padding: 10px 12px; }
 
   .hero { padding-top: 112px; padding-bottom: 72px; }
   .hero-layout { gap: 32px; }
