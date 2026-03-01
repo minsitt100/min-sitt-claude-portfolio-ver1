@@ -92,16 +92,40 @@ body::before {
 }
 
 /* ============================================
-   NAVIGATION — Floating Glass Pill
+   NAVIGATION — Split Floating Glass Pills
    ============================================ */
+
+/* Left pill — logo */
+.nav-logo-pill {
+  position: fixed;
+  top: 20px;
+  left: 24px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  background: var(--glass-bg-strong);
+  backdrop-filter: var(--glass-blur-strong);
+  -webkit-backdrop-filter: var(--glass-blur-strong);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--r-pill);
+  box-shadow: var(--glass-inset), var(--shadow-lg);
+  padding: 10px 18px;
+  transition: opacity var(--dur) var(--ease);
+}
+.nav-logo-pill:hover { opacity: 0.75; }
+
+.nav-logo-img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+/* Right pill — links */
 .nav {
   position: fixed;
   top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
+  right: 24px;
   z-index: 1000;
-  width: calc(100% - 48px);
-  max-width: 860px;
 }
 
 .nav-inner {
@@ -114,18 +138,9 @@ body::before {
   padding: 14px 28px;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 8px;
   transition: box-shadow var(--dur) var(--ease);
 }
-
-.nav-logo {
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: -0.025em;
-  color: var(--text-primary);
-  transition: opacity var(--dur) var(--ease);
-}
-.nav-logo:hover { opacity: 0.6; }
 
 .nav-links {
   display: flex;
@@ -1141,8 +1156,10 @@ body::before {
 @media (max-width: 600px) {
   .container { padding: 0 20px; }
 
-  .nav { width: calc(100% - 32px); top: 14px; }
+  .nav { top: 14px; right: 16px; }
   .nav-inner { padding: 12px 18px; }
+  .nav-logo-pill { top: 14px; left: 16px; padding: 8px 14px; }
+  .nav-logo-img { height: 24px; }
 
   .hero { padding-top: 112px; padding-bottom: 72px; }
   .hero-layout { gap: 32px; }
