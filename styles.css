@@ -1008,8 +1008,9 @@ body::before {
 .cs-figure .cs-image-full {
   margin-top: 0;
   margin-bottom: 0;
-  border-radius: 0;
-  overflow: visible;
+  border-radius: 0 !important;
+  overflow: visible !important;
+  box-shadow: none;
 }
 
 /* Feature cards — Apple Liquid Glass (used in STP case study) */
