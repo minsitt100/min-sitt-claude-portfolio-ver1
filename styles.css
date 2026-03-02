@@ -1109,6 +1109,25 @@ body::before {
 
 .testimonials-scroll-wrapper {
   overflow: hidden;
+  position: relative;
+}
+
+.testimonials-scroll-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 260px;
+  height: 100%;
+  background: linear-gradient(to right, transparent, var(--bg));
+  pointer-events: none;
+  z-index: 1;
+}
+
+@media (max-width: 600px) {
+  .testimonials-scroll-wrapper::after {
+    width: 120px;
+  }
 }
 
 .testimonials-track {
