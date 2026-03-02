@@ -1119,6 +1119,8 @@ body::before {
   scroll-behavior: smooth;
   /* Align first card with container content on all viewport widths */
   padding: 20px max(40px, calc((100vw - 1160px) / 2 + 40px)) 28px;
+  /* Match scroll-padding to padding so snap doesn't override the offset */
+  scroll-padding-left: max(40px, calc((100vw - 1160px) / 2 + 40px));
   scrollbar-width: none;
   -ms-overflow-style: none;
   cursor: grab;
@@ -1384,7 +1386,7 @@ body::before {
 
   .cs-callout { padding: 24px; }
 
-  .testimonials-track { padding: 16px 20px 24px; }
+  .testimonials-track { padding: 16px 20px 24px; scroll-padding-left: 20px; }
   .testimonial-card { width: 300px; padding: 24px; }
   .testimonial-text { font-size: 15px; }
   .testimonial-quote-mark { font-size: 64px; }
