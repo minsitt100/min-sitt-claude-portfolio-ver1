@@ -90,6 +90,23 @@
     });
   });
 
+  /* --- Testimonials scroll controls --- */
+  var testimonialsTrack = document.getElementById('testimonialsTrack');
+  var scrollLeftBtn = document.getElementById('testimonialsScrollLeft');
+  var scrollRightBtn = document.getElementById('testimonialsScrollRight');
+
+  if (testimonialsTrack && scrollLeftBtn && scrollRightBtn) {
+    var cardStep = 396; // card width (380) + gap (16)
+
+    scrollLeftBtn.addEventListener('click', function () {
+      testimonialsTrack.scrollBy({ left: -cardStep, behavior: 'smooth' });
+    });
+
+    scrollRightBtn.addEventListener('click', function () {
+      testimonialsTrack.scrollBy({ left: cardStep, behavior: 'smooth' });
+    });
+  }
+
   /* --- Active nav link highlight on scroll --- */
   var sections = document.querySelectorAll('section[id]');
   var navLinks = document.querySelectorAll('.nav-links a, .nav-mobile a');
