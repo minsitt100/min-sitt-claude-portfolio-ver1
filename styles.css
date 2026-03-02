@@ -649,6 +649,10 @@ body::before {
 .grad-snackpass {
   background: linear-gradient(135deg, #3b0a1c 0%, #831843 40%, #be185d 70%, #e11d48 100%);
 }
+/* JP Morgan — finance, trust, precision */
+.grad-jpm {
+  background: linear-gradient(135deg, #040d1c 0%, #0a1e40 40%, #0d337a 70%, #1a52b8 100%);
+}
 
 /* ============================================
    FOOTER
