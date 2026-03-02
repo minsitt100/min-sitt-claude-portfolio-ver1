@@ -1117,7 +1117,8 @@ body::before {
   overflow-x: auto;
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
-  padding: 20px 40px 28px;
+  /* Align first card with container content on all viewport widths */
+  padding: 20px max(40px, calc((100vw - 1160px) / 2 + 40px)) 28px;
   scrollbar-width: none;
   -ms-overflow-style: none;
   cursor: grab;
@@ -1125,7 +1126,7 @@ body::before {
 .testimonials-track:active { cursor: grabbing; }
 .testimonials-track::-webkit-scrollbar { display: none; }
 
-/* Testimonial Card — distinct from project cards (no image preview, quote-focused) */
+/* Testimonial Card — soft matte frosted sheet, distinct from glossy project cards */
 .testimonial-card {
   flex-shrink: 0;
   width: 380px;
@@ -1133,13 +1134,10 @@ body::before {
   display: flex;
   flex-direction: column;
   padding: 32px;
-  /* Slightly more translucent glass than project cards */
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border: 1px solid var(--glass-border);
+  background: #ECEEF0;
+  border: none;
   border-radius: var(--r-xl);
-  box-shadow: var(--glass-inset), var(--shadow-md);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
   position: relative;
   overflow: hidden;
   transition:
@@ -1148,7 +1146,7 @@ body::before {
 }
 .testimonial-card:hover {
   transform: translateY(-4px);
-  box-shadow: var(--glass-inset), var(--shadow-lg);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.09), 0 2px 8px rgba(0,0,0,0.05);
 }
 
 /* Large decorative opening quote mark */
@@ -1350,7 +1348,7 @@ body::before {
   .cs-nav { grid-template-columns: 1fr; }
   .cs-nav-card.next { text-align: left; }
 
-  .testimonials-track { padding: 20px 24px 28px; }
+  .testimonials-track { padding: 20px 40px 28px; }
 }
 
 @media (max-width: 600px) {
