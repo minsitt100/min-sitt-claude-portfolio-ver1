@@ -1116,21 +1116,32 @@ body::before {
   position: relative;
 }
 
+.testimonials-scroll-wrapper::before,
 .testimonials-scroll-wrapper::after {
   content: '';
   position: absolute;
   top: 0;
-  right: 0;
-  width: 260px;
   height: 100%;
-  background: linear-gradient(to right, transparent, var(--bg));
+  /* Covers the full container margin + 80px into card area so the fade is always visible */
+  width: max(80px, calc((100vw - 1160px) / 2 + 80px));
   pointer-events: none;
   z-index: 1;
 }
 
+.testimonials-scroll-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--bg), transparent);
+}
+
+.testimonials-scroll-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--bg), transparent);
+}
+
 @media (max-width: 600px) {
+  .testimonials-scroll-wrapper::before,
   .testimonials-scroll-wrapper::after {
-    width: 120px;
+    width: 60px;
   }
 }
 
