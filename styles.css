@@ -660,7 +660,25 @@ body::before {
    ============================================ */
 .footer {
   padding: 40px 0;
-  border-top: 1px solid var(--border);
+  background: url('FooterBackground.png') center center / cover no-repeat;
+  border-top: none;
+}
+
+/* Override text colors for accessibility against dark footer background */
+.footer-name {
+  color: #FFFFFF;
+}
+.footer-tagline {
+  color: rgba(255, 255, 255, 0.75);
+}
+.footer-links a {
+  color: rgba(255, 255, 255, 0.80);
+}
+.footer-links a:hover {
+  color: #FFFFFF;
+}
+.footer-copy {
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .footer-inner {
