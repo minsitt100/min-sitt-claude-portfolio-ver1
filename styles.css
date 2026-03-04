@@ -660,7 +660,7 @@ body::before {
    ============================================ */
 .footer {
   padding: 40px 0;
-  background: url('FooterBackground.png') center center / cover no-repeat;
+  background: linear-gradient(135deg, #000000 0%, #030c1e 40%, #071428 70%, #0d2040 100%);
   border-top: none;
 }
 
