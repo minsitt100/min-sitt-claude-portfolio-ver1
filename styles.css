@@ -725,7 +725,7 @@ body::before {
 
 .footer-copy {
   font-size: 13px;
-  color: var(--text-tertiary);
+  color: #ffffff;
 }
 
 /* ============================================
