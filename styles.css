@@ -671,14 +671,21 @@ body::before {
 .footer-tagline {
   color: rgba(255, 255, 255, 0.75);
 }
-.footer-links a {
-  color: rgba(255, 255, 255, 0.80);
-}
-.footer-links a:hover {
-  color: #FFFFFF;
-}
 .footer-copy {
   color: rgba(255, 255, 255, 0.75);
+}
+
+/* Icon buttons tuned for dark footer */
+.footer .social-icon-btn {
+  color: rgba(255, 255, 255, 0.85);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+.footer .social-icon-btn:hover {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.35);
+  box-shadow: var(--glass-inset), 0 0 16px rgba(100, 160, 255, 0.2);
 }
 
 .footer-inner {
