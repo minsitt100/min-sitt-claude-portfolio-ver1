@@ -672,18 +672,18 @@ body::before {
   color: rgba(255, 255, 255, 0.75);
 }
 .footer-copy {
-  color: rgba(255, 255, 255, 0.75);
+  color: #ffffff;
 }
 
-/* Icon buttons tuned for dark footer */
+/* Icon buttons tuned for dark footer — solid background so browser chrome doesn't bleed through */
 .footer .social-icon-btn {
   color: rgba(255, 255, 255, 0.85);
-  background: rgba(255, 255, 255, 0.08);
+  background: #0d1b2e;
   border-color: rgba(255, 255, 255, 0.2);
 }
 .footer .social-icon-btn:hover {
   color: #ffffff;
-  background: rgba(255, 255, 255, 0.18);
+  background: #142540;
   border-color: rgba(255, 255, 255, 0.35);
   box-shadow: var(--glass-inset), 0 0 16px rgba(100, 160, 255, 0.2);
 }
