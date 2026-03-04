@@ -1,0 +1,199 @@
+/* ============================================
+   BURMESE MILK TEA PROGRESS TRACKER
+   ============================================ */
+
+.tea-tracker {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.tea-tracker:hover {
+  transform: translateY(-3px);
+}
+
+/* Tooltip */
+.tea-tracker__tooltip {
+  background: rgba(30, 20, 10, 0.92);
+  color: #f5e6d0;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 5px 10px;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  pointer-events: none;
+  letter-spacing: 0.3px;
+  font-family: var(--font-body, system-ui, sans-serif);
+}
+
+.tea-tracker:hover .tea-tracker__tooltip {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Glass container */
+.tea-tracker__scene {
+  position: relative;
+  width: 56px;
+  height: 90px;
+}
+
+/* The glass SVG */
+.tea-tracker__glass {
+  width: 56px;
+  height: 90px;
+  filter: drop-shadow(0 2px 8px rgba(120, 70, 20, 0.25));
+}
+
+/* Tea liquid fill — animated */
+.tea-liquid {
+  transition: y 0.8s cubic-bezier(0.34, 1.56, 0.64, 1),
+              height 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Wave animation on the surface */
+.tea-wave {
+  animation: teaWave 2.5s ease-in-out infinite;
+}
+
+.tea-wave--slow {
+  animation: teaWaveSlow 3.2s ease-in-out infinite;
+}
+
+@keyframes teaWave {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(-6px); }
+}
+
+@keyframes teaWaveSlow {
+  0%, 100% { transform: translateX(0); }
+  50% { transform: translateX(4px); }
+}
+
+/* Steam wisps */
+.tea-steam {
+  position: absolute;
+  top: -2px;
+  left: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.tea-tracker[data-progress="100"] .tea-steam {
+  opacity: 1;
+}
+
+.steam-wisp {
+  animation: steamRise 2.2s ease-out infinite;
+  opacity: 0;
+}
+
+.steam-wisp:nth-child(2) {
+  animation-delay: 0.7s;
+}
+
+.steam-wisp:nth-child(3) {
+  animation-delay: 1.4s;
+}
+
+@keyframes steamRise {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scaleX(1);
+  }
+  30% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-14px) scaleX(1.5);
+  }
+}
+
+/* ---- CHARACTER (sitting on the glass) ---- */
+.tea-character {
+  position: absolute;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 36px;
+  height: 36px;
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+/* Idle bob */
+.tea-character__body {
+  animation: characterBob 2.8s ease-in-out infinite;
+}
+
+@keyframes characterBob {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
+}
+
+/* Milestone celebration */
+.tea-character--celebrate .tea-character__body {
+  animation: characterCelebrate 0.6s ease-out;
+}
+
+@keyframes characterCelebrate {
+  0% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-6px) rotate(-8deg); }
+  50% { transform: translateY(-8px) rotate(8deg); }
+  75% { transform: translateY(-4px) rotate(-4deg); }
+  100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Eyes blink */
+.tea-character__eyes {
+  animation: blink 4s ease-in-out infinite;
+}
+
+@keyframes blink {
+  0%, 42%, 44%, 100% { transform: scaleY(1); }
+  43% { transform: scaleY(0.1); }
+}
+
+/* Smile widens at higher progress */
+.tea-character__mouth {
+  transition: d 0.4s ease;
+}
+
+/* Progress label below */
+.tea-tracker__label {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--text-secondary, #5a5a5a);
+  letter-spacing: 0.5px;
+  font-family: var(--font-body, system-ui, sans-serif);
+  transition: color 0.3s ease;
+}
+
+.tea-tracker[data-progress="100"] .tea-tracker__label {
+  color: #8B5E3C;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 640px) {
+  .tea-tracker {
+    bottom: 16px;
+    right: 16px;
+    transform: scale(0.85);
+    transform-origin: bottom right;
+  }
+
+  .tea-tracker:hover {
+    transform: scale(0.85) translateY(-3px);
+  }
+}
