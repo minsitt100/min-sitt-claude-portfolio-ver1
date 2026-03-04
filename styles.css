@@ -660,7 +660,8 @@ body::before {
    ============================================ */
 .footer {
   padding: 40px 0;
-  border-top: 1px solid var(--border);
+  background: linear-gradient(135deg, #000000 0%, #030b1a 40%, #061530 70%, #0a1f4a 100%);
+  border-top: 1px solid rgba(30, 80, 180, 0.3);
 }
 
 .footer-inner {
