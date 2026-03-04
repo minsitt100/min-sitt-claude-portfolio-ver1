@@ -956,6 +956,12 @@ body::before {
   width: 100%; height: auto;
   display: block;
 }
+.cs-image-caption {
+  text-align: center;
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: 10px;
+}
 .cs-image-full .image-placeholder {
   aspect-ratio: 16/9;
   display: flex;
