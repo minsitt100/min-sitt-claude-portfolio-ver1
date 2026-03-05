@@ -12,15 +12,14 @@
   pointer-events: auto;
 }
 
-/* ---- GLASS PILL (always visible) ---- */
+/* ---- GLASS PILL (always visible, expands on hover) ---- */
 .tea-tracker-pill {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 4px;
-  width: 48px;
+  max-width: 48px;
   height: 78px; /* matches .nav-logo-pill */
+  overflow: hidden;
   background: var(--glass-bg-strong);
   backdrop-filter: var(--glass-blur-strong);
   -webkit-backdrop-filter: var(--glass-blur-strong);
@@ -29,7 +28,23 @@
   border-radius: 16px;
   cursor: default;
   flex-shrink: 0;
-  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+  transition: max-width 0.4s ease, background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tea-tracker-wrap:hover .tea-tracker-pill {
+  max-width: 480px;
+}
+
+/* ---- PILL ICON (glass SVG + % label, always visible) ---- */
+.tea-pill-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  min-width: 48px;
+  width: 48px;
+  height: 78px;
 }
 
 /* ---- FULL STATE (100% — dark milk-tea background) ---- */
@@ -61,15 +76,13 @@
   transition: color 0.4s ease;
 }
 
-/* ---- CHARACTER + MESSAGE (appears on hover, to the right) ---- */
+/* ---- CHARACTER + MESSAGE (appears on hover, inside pill) ---- */
 .tea-character-group {
-  position: absolute;
-  left: calc(100% + 10px);
-  top: 50%;
-  transform: translateY(-50%);
   display: flex;
   align-items: center;
   gap: 8px;
+  padding: 0 16px 0 8px;
+  flex-shrink: 0;
   opacity: 0;
   pointer-events: none;
   transition: opacity 0.22s ease;
@@ -77,6 +90,7 @@
 
 .tea-tracker-wrap:hover .tea-character-group {
   opacity: 1;
+  transition-delay: 0.2s;
 }
 
 /* ---- CHARACTER SVG ---- */
@@ -156,8 +170,14 @@
 /* ---- RESPONSIVE: mobile hides character group, shrinks pill ---- */
 @media (max-width: 600px) {
   .tea-tracker-pill {
-    width: 40px;
+    max-width: 40px;
     height: 60px; /* matches .nav-logo-pill mobile height */
+  }
+
+  .tea-pill-icon {
+    min-width: 40px;
+    width: 40px;
+    height: 60px;
   }
 
   .tea-tracker__glass {

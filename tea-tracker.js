@@ -17,22 +17,21 @@
     '/case-study-1.html': 'cs1',
     '/case-study-2.html': 'cs2',
     '/case-study-3.html': 'cs3',
-    '/case-study-4.html': 'cs4'
-    // '/case-study-5.html': 'cs5',  <-- uncomment and add when ready
+    '/case-study-5.html': 'cs5'
   };
   var TOTAL_PAGES = 4; // Must equal number of entries in PAGES above
   var STORAGE_KEY = 'tea_v2'; // bumped to clear old dev data
 
   // ---- STORAGE ----
   function getVisited() {
-    try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; }
+    try { return JSON.parse(sessionStorage.getItem(STORAGE_KEY)) || {}; }
     catch (e) { return {}; }
   }
 
   function markVisited(pageId) {
     var visited = getVisited();
     visited[pageId] = true;
-    try { localStorage.setItem(STORAGE_KEY, JSON.stringify(visited)); }
+    try { sessionStorage.setItem(STORAGE_KEY, JSON.stringify(visited)); }
     catch (e) {}
     return visited;
   }
@@ -58,6 +57,7 @@
 
     wrap.innerHTML =
       '<div class="tea-tracker-pill">' +
+        '<div class="tea-pill-icon">' +
         '<svg class="tea-tracker__glass" viewBox="0 0 56 90" fill="none" xmlns="http://www.w3.org/2000/svg">' +
           '<defs>' +
             '<linearGradient id="tg-fill" x1="0" y1="0" x2="0" y2="1">' +
@@ -88,7 +88,7 @@
           '<rect x="14" y="16" width="3" height="48" rx="1.5" fill="rgba(255,255,255,0.11)"/>' +
         '</svg>' +
         '<span class="tea-tracker__label" id="tg-pct">0%</span>' +
-      '</div>' +
+      '</div>' +  // closes .tea-pill-icon
       '<div class="tea-character-group">' +
         '<svg class="tea-character" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">' +
           '<g class="tea-character__body">' +
@@ -114,7 +114,8 @@
           '</g>' +
         '</svg>' +
         '<p class="tea-status-msg" id="tg-msg">Explore more of the portfolio to fill up the glass with La Phet Yae (Burmese Milk Tea). Current: <strong id="tg-msg-pct">0%</strong></p>' +
-      '</div>';
+      '</div>' +  // closes .tea-character-group
+      '</div>';   // closes .tea-tracker-pill
 
     return wrap;
   }
@@ -158,6 +159,16 @@
 
     if (pct)    pct.textContent    = progress + '%';
     if (msgPct) msgPct.textContent = progress + '%';
+
+    // Swap message text at 100%
+    var msg = widget.querySelector('#tg-msg');
+    if (msg) {
+      if (progress >= 100) {
+        msg.innerHTML = 'Thank you for checking out my whole portfolio! Current: <strong id="tg-msg-pct">100%</strong>';
+      } else {
+        msg.innerHTML = 'Explore more of the portfolio to fill up the glass with La Phet Yae (Burmese Milk Tea). Current: <strong id="tg-msg-pct">' + progress + '%</strong>';
+      }
+    }
 
     // Smile grows with progress
     if (mouth) {
