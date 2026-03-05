@@ -90,29 +90,7 @@
         '<span class="tea-tracker__label" id="tg-pct">0%</span>' +
       '</div>' +  // closes .tea-pill-icon
       '<div class="tea-character-group">' +
-        '<svg class="tea-character" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">' +
-          '<g class="tea-character__body">' +
-            /* Body */
-            '<ellipse cx="18" cy="25" rx="10" ry="7" fill="#D4A574"/>' +
-            /* Head */
-            '<circle cx="18" cy="13" r="10" fill="#E8C9A0"/>' +
-            /* Cheeks */
-            '<circle cx="11" cy="15" r="2.5" fill="#F0B8A0" opacity="0.55"/>' +
-            '<circle cx="25" cy="15" r="2.5" fill="#F0B8A0" opacity="0.55"/>' +
-            /* Eyes */
-            '<g class="tea-character__eyes">' +
-              '<ellipse cx="14" cy="12" rx="1.5" ry="1.8" fill="#3D2B1F"/>' +
-              '<ellipse cx="22" cy="12" rx="1.5" ry="1.8" fill="#3D2B1F"/>' +
-              '<circle cx="14.7" cy="11.2" r="0.6" fill="#fff"/>' +
-              '<circle cx="22.7" cy="11.2" r="0.6" fill="#fff"/>' +
-            '</g>' +
-            /* Mouth — updated by JS based on progress */
-            '<path class="tea-character__mouth" id="tg-mouth" d="M15 17 Q18 19 21 17" stroke="#3D2B1F" stroke-width="1.2" stroke-linecap="round" fill="none"/>' +
-            /* Beret */
-            '<ellipse cx="18" cy="5" rx="8" ry="3" fill="#8B5E3C"/>' +
-            '<rect x="12" y="3" width="12" height="4" rx="2" fill="#A0714F"/>' +
-          '</g>' +
-        '</svg>' +
+        '<img class="tea-character" src="assets/images/headshot.jpg" alt="Min Sitt" />' +
         '<p class="tea-status-msg" id="tg-msg">Explore more of the portfolio to fill up the glass with La Phet Yae (Burmese Milk Tea). Current: <strong id="tg-msg-pct">0%</strong></p>' +
       '</div>' +  // closes .tea-character-group
       '</div>';   // closes .tea-tracker-pill
@@ -135,8 +113,6 @@
     var wave2  = widget.querySelector('#tg-wave2');
     var pct    = widget.querySelector('#tg-pct');
     var msgPct = widget.querySelector('#tg-msg-pct');
-    var mouth  = widget.querySelector('#tg-mouth');
-
     if (liquid) {
       liquid.setAttribute('y', String(fillY));
       liquid.setAttribute('height', String(fillH));
@@ -166,12 +142,6 @@
       }
     }
 
-    // Smile grows with progress
-    if (mouth) {
-      if      (progress < 34) mouth.setAttribute('d', 'M15 17 Q18 18.5 21 17');
-      else if (progress < 67) mouth.setAttribute('d', 'M15 17 Q18 20 21 17');
-      else                    mouth.setAttribute('d', 'M14 16 Q18 21 22 16');
-    }
   }
 
   // ---- ANIMATE FILL (smooth rAF interpolation) ----

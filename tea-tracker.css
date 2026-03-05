@@ -83,33 +83,23 @@
   transition-delay: 0.2s;
 }
 
-/* ---- CHARACTER SVG ---- */
+/* ---- CHARACTER HEADSHOT ---- */
 .tea-character {
   flex-shrink: 0;
   width: 36px;
   height: 36px;
-}
-
-.tea-character__body {
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
   animation: charBob 2.8s ease-in-out infinite;
 }
 
 @keyframes charBob {
   0%, 100% { transform: translateY(0); }
-  50%       { transform: translateY(-2px); }
+  50%       { transform: translateY(-4px); }
 }
 
-.tea-character__eyes {
-  animation: blink 4s ease-in-out infinite;
-  transform-origin: center;
-}
-
-@keyframes blink {
-  0%, 42%, 44%, 100% { transform: scaleY(1); }
-  43%                 { transform: scaleY(0.1); }
-}
-
-.tea-character--celebrate .tea-character__body {
+.tea-character--celebrate {
   animation: charCelebrate 0.65s ease-out;
 }
 
