@@ -90,7 +90,7 @@
         '<span class="tea-tracker__label" id="tg-pct">0%</span>' +
       '</div>' +  // closes .tea-pill-icon
       '<div class="tea-character-group">' +
-        '<img class="tea-character" src="assets/images/headshot.jpg" alt="Min Sitt" />' +
+        '<img class="tea-character" src="assets/IMG_3517.png" alt="Min Sitt" />' +
         '<p class="tea-status-msg" id="tg-msg">Explore more of the portfolio to fill up the glass with La Phet Yae (Burmese Milk Tea). Current: <strong id="tg-msg-pct">0%</strong></p>' +
       '</div>' +  // closes .tea-character-group
       '</div>';   // closes .tea-tracker-pill
