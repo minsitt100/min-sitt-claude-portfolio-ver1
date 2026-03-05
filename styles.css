@@ -110,6 +110,13 @@ body::before {
   pointer-events: none;
 }
 
+/* Left nav group: logo pill + tea tracker */
+.nav-left {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
 /* Shared glass pill base */
 .nav-logo-pill,
 .nav-links-pill {
