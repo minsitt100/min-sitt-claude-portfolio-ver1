@@ -47,16 +47,6 @@
   height: 78px;
 }
 
-/* ---- FULL STATE (100% — dark milk-tea background) ---- */
-.tea-tracker-pill--full {
-  background: #6B3F25;
-  border-color: rgba(255, 255, 255, 0.18);
-  box-shadow: var(--glass-inset), var(--shadow-lg), 0 0 0 1px rgba(107, 63, 37, 0.3);
-}
-
-.tea-tracker-pill--full .tea-tracker__label {
-  color: #fff;
-}
 
 /* ---- GLASS SVG ---- */
 .tea-tracker__glass {

@@ -153,10 +153,6 @@
     if (wave1) wave1.setAttribute('d', w1d);
     if (wave2) wave2.setAttribute('d', w2d);
 
-    // Dark pill + white label at 100%
-    var pill = widget.querySelector('.tea-tracker-pill');
-    if (pill) pill.classList.toggle('tea-tracker-pill--full', progress >= 100);
-
     if (pct)    pct.textContent    = progress + '%';
     if (msgPct) msgPct.textContent = progress + '%';
 
