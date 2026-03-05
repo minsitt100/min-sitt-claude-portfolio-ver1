@@ -91,7 +91,10 @@
       '</div>' +  // closes .tea-pill-icon
       '<div class="tea-character-group">' +
         '<img class="tea-character" src="assets/IMG_3517.png" alt="Min Sitt" />' +
-        '<p class="tea-status-msg" id="tg-msg">Explore more of the portfolio to fill up the glass with La Phet Yae (Burmese Milk Tea). Current: <strong id="tg-msg-pct">0%</strong></p>' +
+        '<div class="tea-msg-wrap">' +
+          '<span class="tea-speaker-name">Min Sitt:</span>' +
+          '<p class="tea-status-msg" id="tg-msg">Explore more of the portfolio to fill up the glass with La Phet Yae (Burmese Milk Tea). Current: <strong id="tg-msg-pct">0%</strong></p>' +
+        '</div>' +
       '</div>' +  // closes .tea-character-group
       '</div>';   // closes .tea-tracker-pill
 
