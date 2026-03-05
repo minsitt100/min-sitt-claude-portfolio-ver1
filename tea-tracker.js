@@ -21,7 +21,7 @@
     // '/case-study-5.html': 'cs5',  <-- uncomment and add when ready
   };
   var TOTAL_PAGES = 4; // Must equal number of entries in PAGES above
-  var STORAGE_KEY = 'tea_visited';
+  var STORAGE_KEY = 'tea_v2'; // bumped to clear old dev data
 
   // ---- STORAGE ----
   function getVisited() {
@@ -151,6 +151,10 @@
     var w2d = 'M6 ' + wY + ' Q12 ' + (wY + 2) + ' 20 ' + wY + ' Q30 ' + (wY - 2) + ' 38 ' + wY + ' Q46 ' + (wY + 2) + ' 50 ' + wY + ' L50 ' + (wY + 4) + ' L6 ' + (wY + 4) + ' Z';
     if (wave1) wave1.setAttribute('d', w1d);
     if (wave2) wave2.setAttribute('d', w2d);
+
+    // Dark pill + white label at 100%
+    var pill = widget.querySelector('.tea-tracker-pill');
+    if (pill) pill.classList.toggle('tea-tracker-pill--full', progress >= 100);
 
     if (pct)    pct.textContent    = progress + '%';
     if (msgPct) msgPct.textContent = progress + '%';

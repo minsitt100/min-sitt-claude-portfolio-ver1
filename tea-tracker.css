@@ -29,6 +29,18 @@
   border-radius: 16px;
   cursor: default;
   flex-shrink: 0;
+  transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ---- FULL STATE (100% — dark milk-tea background) ---- */
+.tea-tracker-pill--full {
+  background: #6B3F25;
+  border-color: rgba(255, 255, 255, 0.18);
+  box-shadow: var(--glass-inset), var(--shadow-lg), 0 0 0 1px rgba(107, 63, 37, 0.3);
+}
+
+.tea-tracker-pill--full .tea-tracker__label {
+  color: #fff;
 }
 
 /* ---- GLASS SVG ---- */
@@ -42,10 +54,11 @@
 .tea-tracker__label {
   font-size: 10px;
   font-weight: 700;
-  color: var(--text-secondary, #666);
+  font-family: var(--font);
+  color: var(--text-secondary);
   letter-spacing: 0.3px;
-  font-family: var(--font-body, system-ui, sans-serif);
   line-height: 1;
+  transition: color 0.4s ease;
 }
 
 /* ---- CHARACTER + MESSAGE (appears on hover, to the right) ---- */
@@ -92,7 +105,6 @@
   43%                 { transform: scaleY(0.1); }
 }
 
-/* Celebrate bounce on milestone */
 .tea-character--celebrate .tea-character__body {
   animation: charCelebrate 0.65s ease-out;
 }
@@ -107,19 +119,19 @@
 
 /* ---- STATUS MESSAGE ---- */
 .tea-status-msg {
-  font-size: 11px;
-  font-weight: 500;
-  color: var(--text-secondary, #666);
-  line-height: 1.45;
-  max-width: 220px;
+  font-family: var(--font);
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  max-width: 300px;
   white-space: normal;
-  font-family: var(--font-body, system-ui, sans-serif);
   margin: 0;
 }
 
 .tea-status-msg strong {
-  color: var(--text-primary, #111);
-  font-weight: 700;
+  font-weight: 600;
+  color: var(--text-primary);
 }
 
 /* ---- LIQUID WAVE ANIMATIONS ---- */

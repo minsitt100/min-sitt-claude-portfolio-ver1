@@ -114,7 +114,7 @@ body::before {
 .nav-left {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: 16px;
 }
 
 /* Shared glass pill base */
