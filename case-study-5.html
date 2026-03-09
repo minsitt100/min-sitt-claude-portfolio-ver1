@@ -154,7 +154,7 @@
           <p class="cs-section-label">Research &amp; Discovery</p>
           <h2>Before we could design anything, we needed to understand the system — and the people inside it.</h2>
           <p>I joined this project as a new hire, which meant I had no inherited assumptions about the product, its architecture, or how reps actually worked. That turned out to be an advantage. I approached the research with genuine curiosity rather than confirmation bias.</p>
-          <p>Over several weeks, my team and I conducted:</p>
+          <p>I led the research process — facilitating interviews, synthesizing findings, and driving the insight work from start to finish. My team and I alternated running sessions so we could capture a breadth of perspectives. Over several weeks, we conducted:</p>
 
           <div class="cs-stats">
             <div class="stat-card">
@@ -256,7 +256,12 @@
           <p>We went back to our reps with targeted follow-up interviews, this time focused on a specific question: how do they distinguish a transaction that's normally in-process from one that's genuinely stuck?</p>
           <p>Their answer was consistent across every conversation: <strong>time.</strong></p>
           <p>Standard processing times for different payment types were well-established and predictable to experienced reps. A wire sitting in fraud review for two hours was normal. That same wire sitting there for two days was not. A transaction progressing through formal processes at the expected pace didn't need attention. A transaction stuck in any stage longer than it should be was a clear signal.</p>
-          <p>We also went granular on the details — re-validating the exact language used for each transaction status, confirming which data fields were essential versus nice-to-have, and pressure-testing what "abnormally long" looked like for each payment type.</p>
+          <p>We also went granular on the details:</p>
+          <ul>
+            <li><strong>Status labels</strong> — re-validated the exact language for each transaction state directly with reps to ensure clarity at a glance.</li>
+            <li><strong>Data fields</strong> — confirmed which fields were essential versus nice-to-have, cutting anything that added noise without actionability.</li>
+            <li><strong>Time thresholds</strong> — pressure-tested what "abnormally long" looked like for each payment type, so the filter reflected how reps actually thought about risk.</li>
+          </ul>
           <p>Engineering confirmed the approach was architecturally sound. We had our revised solution.</p>
         </div>
 
@@ -267,13 +272,14 @@
           <p class="cs-section-label">The Revised Solution</p>
           <h2>Time-based transaction surfacing: only show what actually needs attention.</h2>
           <p>Instead of displaying all transactions, the redesigned experience surfaces only those that have been stuck in a processing stage longer than expected for that payment type. Transactions progressing normally don't appear — which means the view reps see isn't noise. It's signal.</p>
+          <p>I determined where every element lived: button placements, the time-bound filter controls and how reps would manipulate the settings, the column structure of the transaction table, and where filtering and customization actions were placed within the view. I also designed the client grid — the component where reps select which client's transactions to view — including what information appeared in each card and how cards were organized to support quick scanning. I established the color usage, icon system, font sizing, and spacing throughout, then prototyped the complete UX flow across 20+ screens to validate how each part of the experience led to the next. (Screens are not shareable due to confidentiality.)</p>
           <p>Every transaction that does appear comes with the essential context reps need: payment type, current stage, how long it's been there, and the information needed to give the client a clear, accurate update. No extra platform switching. No calls to other teams just to gather basic facts.</p>
 
           <h3>What makes this work</h3>
           <ul>
-            <li><strong>It surfaces itself.</strong> Reps don't need to go looking. The view is designed to be front-and-center, showing only what's actionable right now — so a rep can be proactive without adding to their cognitive load.</li>
-            <li><strong>It respects the architecture.</strong> By filtering to anomalous transactions only, the load constraint becomes a non-issue. The platform loads a small, high-signal set of transactions rather than everything at once.</li>
-            <li><strong>It was built on rep feedback.</strong> Every status label, every data field, and every time threshold was validated directly with the reps who would be using it — down to the exact phrasing of each transaction state.</li>
+            <li><strong>I designed it to surface itself.</strong> Reps don't need to go looking. I positioned the time-bound view front-and-center in the experience, showing only what's actionable right now — so a rep can be proactive without adding to their cognitive load.</li>
+            <li><strong>I designed it to respect the architecture.</strong> By filtering to anomalous transactions only, the load constraint becomes a non-issue. The platform loads a small, high-signal set of transactions rather than everything at once.</li>
+            <li><strong>I built it on rep feedback.</strong> Every status label, every data field, and every time threshold was validated directly with the reps who would be using it — down to the exact phrasing of each transaction state.</li>
           </ul>
         </div>
 
