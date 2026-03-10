@@ -639,9 +639,9 @@ body::before {
 }
 
 .cs-nda-gate-label {
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 500;
-  color: var(--text-tertiary);
+  color: var(--text-primary);
   letter-spacing: 0.04em;
 }
 
