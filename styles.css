@@ -505,11 +505,6 @@ body::before {
   gap: 20px;
 }
 
-/* First and last (wide) cards span full width */
-.projects-grid .project-card:first-child,
-.projects-grid .project-card--wide {
-  grid-column: 1 / -1;
-}
 
 /* Project Card — Liquid Glass */
 .project-card {
@@ -542,10 +537,6 @@ body::before {
   aspect-ratio: 16 / 9;
   overflow: hidden;
   position: relative;
-}
-.projects-grid .project-card:first-child .project-preview,
-.projects-grid .project-card--wide .project-preview {
-  aspect-ratio: 21 / 8;
 }
 
 .project-preview-bg {
@@ -591,8 +582,6 @@ body::before {
   color: var(--text-primary);
   margin-bottom: 6px;
 }
-.projects-grid .project-card:first-child .project-title,
-.projects-grid .project-card--wide .project-title { font-size: 24px; }
 
 .project-desc {
   font-size: 14px;
@@ -1446,12 +1435,6 @@ body::before {
   }
 
   .projects-grid { grid-template-columns: 1fr; }
-  .projects-grid .project-card:first-child,
-  .projects-grid .project-card--wide { grid-column: auto; }
-  .projects-grid .project-card:first-child .project-preview,
-  .projects-grid .project-card--wide .project-preview { aspect-ratio: 16/9; }
-  .projects-grid .project-card:first-child .project-title,
-  .projects-grid .project-card--wide .project-title { font-size: 20px; }
 
   .cs-image-full { width: 100%; margin-left: 0; }
   .cs-stats { grid-template-columns: 1fr 1fr; }
