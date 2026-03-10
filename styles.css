@@ -621,6 +621,36 @@ body::before {
   border-radius: var(--r-pill);
 }
 
+.tag--nda {
+  color: #92400E;
+  background: rgba(251, 191, 36, 0.12);
+  border-color: rgba(251, 191, 36, 0.35);
+}
+
+/* NDA Gate — case study locked section */
+.cs-nda-gate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 80px 24px 100px;
+  gap: 20px;
+}
+
+.cs-nda-gate-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-tertiary);
+  letter-spacing: 0.04em;
+}
+
+.cs-nda-gate .social-icon-btn {
+  width: 48px;
+  height: 48px;
+  font-size: 22px;
+}
+
 .project-arrow {
   display: flex;
   align-items: center;
