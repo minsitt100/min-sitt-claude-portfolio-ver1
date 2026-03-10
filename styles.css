@@ -557,10 +557,8 @@ body::before {
 /* Info panel */
 .project-info {
   padding: 24px 28px;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 16px;
+  position: relative;
+  padding-right: 80px;
 }
 
 .project-meta { flex: 1; }
@@ -648,8 +646,9 @@ body::before {
   border-radius: 50%;
   background: rgba(0,0,0,0.06);
   color: var(--text-primary);
-  flex-shrink: 0;
-  align-self: flex-end;
+  position: absolute;
+  right: 28px;
+  bottom: 24px;
   transition: all var(--dur) var(--ease);
 }
 .project-card:hover .project-arrow {
@@ -1464,7 +1463,8 @@ body::before {
     height: 180px;
   }
 
-  .project-info { padding: 18px 20px; }
+  .project-info { padding: 18px 20px; padding-right: 72px; }
+  .project-arrow { right: 20px; bottom: 18px; }
   .project-title { font-size: 17px !important; }
 
   .cs-hero-image { border-radius: var(--r-lg); }
