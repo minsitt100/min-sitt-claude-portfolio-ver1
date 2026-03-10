@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume | Min Sitt</title>
+  <meta name="description" content="Resume of Min Sitt Thu Aung — Product Strategist & Designer." />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <style>
+    .resume-page {
+      padding-top: 120px;
+      padding-bottom: 80px;
+      min-height: 100vh;
+    }
+    .resume-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .resume-header h1 {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0;
+    }
+    .resume-actions {
+      display: flex;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+    .resume-actions a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: var(--r-full);
+      font-size: 0.8125rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: opacity 0.15s;
+    }
+    .resume-actions a:hover { opacity: 0.75; }
+    .resume-btn-download {
+      background: var(--accent);
+      color: #fff;
+    }
+    .resume-btn-newtab {
+      background: var(--surface-2, rgba(255,255,255,0.07));
+      color: var(--text-primary);
+      border: 1px solid var(--border, rgba(255,255,255,0.1));
+    }
+    .resume-embed-wrapper {
+      width: 100%;
+      border-radius: var(--r-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      background: #1a1a1a;
+    }
+    .resume-embed-wrapper iframe {
+      display: block;
+      width: 100%;
+      height: 85vh;
+      border: none;
+    }
+    .resume-placeholder {
+      width: 100%;
+      height: 85vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      color: rgba(255,255,255,0.35);
+      font-size: 0.875rem;
+    }
+    .resume-placeholder svg {
+      opacity: 0.25;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="nav" role="navigation">
+    <div class="nav-left">
+      <a href="index.html" class="nav-logo-pill">
+        <img src="assets/images/logo.svg" alt="Min Sitt" class="nav-logo" />
+      </a>
+    </div>
+    <div class="nav-links-pill">
+      <div class="nav-links">
+        <a href="index.html#work">Work</a>
+        <a href="resume.html" class="active">Resume</a>
+        <a href="about.html">About</a>
+      </div>
+      <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile" role="menu">
+      <a href="index.html#work" role="menuitem">Work</a>
+      <a href="resume.html" role="menuitem">Resume</a>
+      <a href="about.html" role="menuitem">About</a>
+    </div>
+  </nav>
+
+  <main class="resume-page">
+    <div class="container">
+      <div class="resume-header">
+        <h1>Resume</h1>
+        <div class="resume-actions">
+          <!-- Update href to point to your actual PDF file once added -->
+          <a href="assets/resume.pdf" download class="resume-btn-download">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="7 10 12 15 17 10"/>
+              <line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Download
+          </a>
+          <a href="assets/resume.pdf" target="_blank" rel="noopener" class="resume-btn-newtab">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+              <polyline points="15 3 21 3 21 9"/>
+              <line x1="10" y1="14" x2="21" y2="3"/>
+            </svg>
+            Open in new tab
+          </a>
+        </div>
+      </div>
+
+      <div class="resume-embed-wrapper">
+        <!-- Replace assets/resume.pdf with your actual file path once added -->
+        <iframe
+          src="assets/resume.pdf"
+          title="Min Sitt Resume"
+          aria-label="Resume PDF viewer"
+        >
+          <!-- Fallback for browsers that don't support iframe PDF rendering -->
+          <div class="resume-placeholder">
+            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+              <polyline points="14 2 14 8 20 8"/>
+            </svg>
+            <span>Your browser doesn't support embedded PDFs.</span>
+            <a href="assets/resume.pdf" download class="resume-btn-download" style="margin-top:8px">Download Resume</a>
+          </div>
+        </iframe>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-name">Min Sitt Thu Aung</span>
+          <span class="footer-tagline">Product Strategist &amp; Designer</span>
+        </div>
+        <nav class="footer-links" aria-label="Footer links">
+          <a href="mailto:minsitt101@gmail.com" class="social-icon-btn" aria-label="Email Min Sitt">
+            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6ZM20 6L12 11L4 6H20ZM20 18H4V8L12 13L20 8V18Z" fill="currentColor"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com/in/min-sitt-thu-aung/" target="_blank" rel="noopener" class="social-icon-btn" aria-label="Min Sitt on LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M20.447 20.452H16.893V14.883C16.893 13.555 16.866 11.846 15.041 11.846C13.188 11.846 12.905 13.291 12.905 14.785V20.452H9.351V9H12.765V10.561H12.811C13.288 9.661 14.448 8.711 16.181 8.711C19.782 8.711 20.448 11.081 20.448 14.166V20.452H20.447ZM5.337 7.433C4.193 7.433 3.274 6.507 3.274 5.368C3.274 4.23 4.194 3.305 5.337 3.305C6.477 3.305 7.401 4.23 7.401 5.368C7.401 6.507 6.476 7.433 5.337 7.433ZM7.119 20.452H3.555V9H7.119V20.452ZM22.225 0H1.771C0.792 0 0 0.774 0 1.729V22.271C0 23.227 0.792 24 1.771 24H22.222C23.2 24 24 23.227 24 22.271V1.729C24 0.774 23.2 0 22.222 0H22.225Z"/>
+            </svg>
+          </a>
+        </nav>
+        <span class="footer-copy">&copy; 2025 Min Sitt</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
