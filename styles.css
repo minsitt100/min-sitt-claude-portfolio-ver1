@@ -1850,6 +1850,9 @@ body::before {
   color: var(--text-secondary);
 }
 
+/* Logo pill — keep white background in dark mode so black logo stays visible */
+[data-theme="dark"] .nav-logo-pill { background: rgba(255, 255, 255, 0.90); }
+
 /* Social icon — white in dark mode */
 [data-theme="dark"] .social-icon-btn { color: #FFFFFF; }
 [data-theme="dark"] .social-icon-btn:hover { background: rgba(255,255,255,0.12); }
