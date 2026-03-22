@@ -1173,6 +1173,22 @@ body::before {
   padding: 0 0 120px;
 }
 
+.testimonials-section-header {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 48px;
+}
+
+.testimonials-heading {
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  line-height: 1.15;
+  text-transform: none;
+  margin: 0;
+}
+
 .testimonials-scroll-wrapper {
   overflow: hidden;
   position: relative;
