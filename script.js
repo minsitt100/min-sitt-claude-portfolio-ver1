@@ -90,6 +90,19 @@
     });
   });
 
+  /* --- iMessage status bar clock --- */
+  var imsgTimeEl = document.querySelector('.imsg-time');
+  if (imsgTimeEl) {
+    function updateImsgTime() {
+      var now = new Date();
+      var h = now.getHours() % 12 || 12;
+      var m = now.getMinutes().toString().padStart(2, '0');
+      imsgTimeEl.textContent = h + ':' + m;
+    }
+    updateImsgTime();
+    setInterval(updateImsgTime, 60000);
+  }
+
   /* --- iMessage chat animation --- */
   var imsgWindow = document.getElementById('imsgWindow');
   var imsgBody   = document.getElementById('imsgBody');
