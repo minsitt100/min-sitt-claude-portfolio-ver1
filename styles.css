@@ -1856,6 +1856,15 @@ body::before {
 /* Logo pill — keep white background in dark mode so black logo stays visible */
 [data-theme="dark"] .nav-logo-pill { background: rgba(255, 255, 255, 0.90); }
 
+/* Nav links pill + tea tracker — solid opaque background in dark mode so
+   scrolled content never bleeds through and text stays readable */
+[data-theme="dark"] .nav-links-pill {
+  background: #1e2030;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-color: rgba(255, 255, 255, 0.10);
+}
+
 /* Social icon — white in dark mode */
 [data-theme="dark"] .social-icon-btn { color: #FFFFFF; }
 [data-theme="dark"] .social-icon-btn:hover { background: rgba(255,255,255,0.12); }

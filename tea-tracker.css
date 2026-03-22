@@ -185,3 +185,11 @@
     display: none;
   }
 }
+
+/* Dark mode — solid opaque pill so scrolled content doesn't bleed through */
+[data-theme="dark"] .tea-tracker-pill {
+  background: #1e2030;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  border-color: rgba(255, 255, 255, 0.10);
+}
