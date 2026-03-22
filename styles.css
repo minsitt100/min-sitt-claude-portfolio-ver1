@@ -1552,26 +1552,30 @@ body::before {
   50%       { transform: scale(1) rotate(2deg); }
 }
 
-/* Pop-in animation */
+/* Zoom-in pop */
 @keyframes bubble-pop-in {
-  0% { opacity: 0; transform: scale(0); }
-  60% { opacity: 1; transform: scale(1.08); }
+  0%   { opacity: 0; transform: scale(0.4); }
+  65%  { opacity: 1; transform: scale(1.06); }
   100% { opacity: 1; transform: scale(1); }
 }
 
-/* Active state — applied via JS */
+/* Zoom-out dismiss */
+@keyframes bubble-pop-out {
+  0%   { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(0.4); }
+}
+
+/* Active state */
 .speech-bubble.is-visible {
   opacity: 1;
   transform: scale(1);
-  animation: bubble-pop-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
-             bubble-sway 2.5s ease-in-out 0.4s infinite;
+  animation: bubble-pop-in 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+             bubble-sway 2.5s ease-in-out 0.5s infinite;
 }
 
-/* Fade-out transition */
+/* Zoom-out dismiss */
 .speech-bubble.is-fading {
-  opacity: 0;
-  transition: opacity 0.4s ease;
-  animation: bubble-sway 2.5s ease-in-out infinite;
+  animation: bubble-pop-out 0.5s cubic-bezier(0.4, 0, 0.6, 1) forwards;
 }
 
 

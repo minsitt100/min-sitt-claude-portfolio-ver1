@@ -124,7 +124,7 @@
         setTimeout(function () {
           bubble.classList.remove('is-fading');
           setTimeout(runBubbleCycle, 2000); // 2s hidden gap
-        }, 400); // fade-out duration
+        }, 500); // fade-out duration
       }, 5000); // visible for 5s
     }
 
