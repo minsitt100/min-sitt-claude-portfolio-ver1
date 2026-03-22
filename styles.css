@@ -1850,7 +1850,8 @@ body::before {
   color: var(--text-secondary);
 }
 
-/* Social icon hover */
+/* Social icon — white in dark mode */
+[data-theme="dark"] .social-icon-btn { color: #FFFFFF; }
 [data-theme="dark"] .social-icon-btn:hover { background: rgba(255,255,255,0.12); }
 
 /* Footer separator */
