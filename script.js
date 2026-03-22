@@ -112,22 +112,23 @@
   var photoWrap = document.querySelector('.hero-photo-wrap');
 
   if (bubble && photoWrap) {
-    // Initial auto-popup after 2s
-    setTimeout(function () {
+    // Loop: show for 5s, hide for 2s, repeat
+    function runBubbleCycle() {
+      bubble.classList.remove('is-fading');
       bubble.classList.add('is-visible');
 
-      // Fade out after 4s
       setTimeout(function () {
         bubble.classList.remove('is-visible');
         bubble.classList.add('is-fading');
 
-        // After fade completes, enable hover mode
         setTimeout(function () {
           bubble.classList.remove('is-fading');
-          bubble.classList.add('hover-enabled');
-        }, 400);
-      }, 4000);
-    }, 2000);
+          setTimeout(runBubbleCycle, 2000); // 2s hidden gap
+        }, 400); // fade-out duration
+      }, 5000); // visible for 5s
+    }
+
+    setTimeout(runBubbleCycle, 1000); // initial delay before first show
   }
 
   /* --- Idle nudge toward work section --- */
