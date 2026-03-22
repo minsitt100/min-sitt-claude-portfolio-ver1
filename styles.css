@@ -1771,12 +1771,12 @@ body::before {
   height: 18px;
   transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
 }
-/* Light mode: sun visible, moon hidden */
-.theme-icon--sun  { opacity: 1; transform: rotate(0deg) scale(1); }
-.theme-icon--moon { opacity: 0; transform: rotate(90deg) scale(0.5); }
-/* Dark mode: moon visible, sun hidden */
-[data-theme="dark"] .theme-icon--sun  { opacity: 0; transform: rotate(-90deg) scale(0.5); }
-[data-theme="dark"] .theme-icon--moon { opacity: 1; transform: rotate(0deg) scale(1); }
+/* Light mode: moon visible (click → switch to dark), sun hidden */
+.theme-icon--sun  { opacity: 0; transform: rotate(90deg) scale(0.5); }
+.theme-icon--moon { opacity: 1; transform: rotate(0deg) scale(1); }
+/* Dark mode: sun visible (click → switch to light), moon hidden */
+[data-theme="dark"] .theme-icon--sun  { opacity: 1; transform: rotate(0deg) scale(1); }
+[data-theme="dark"] .theme-icon--moon { opacity: 0; transform: rotate(-90deg) scale(0.5); }
 
 /* ============================================
    DARK MODE
