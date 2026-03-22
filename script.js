@@ -227,6 +227,28 @@
     });
   }
 
+  /* --- Theme toggle --- */
+  var themeToggleBtn = document.getElementById('themeToggle');
+  if (themeToggleBtn) {
+    function updateToggleLabel() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      themeToggleBtn.setAttribute('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    }
+    updateToggleLabel();
+
+    themeToggleBtn.addEventListener('click', function () {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        try { localStorage.setItem('theme', 'light'); } catch (e) {}
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        try { localStorage.setItem('theme', 'dark'); } catch (e) {}
+      }
+      updateToggleLabel();
+    });
+  }
+
   /* --- Active nav link highlight on scroll --- */
   var sections = document.querySelectorAll('section[id]');
   var navLinks = document.querySelectorAll('.nav-links a, .nav-mobile a');

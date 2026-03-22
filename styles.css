@@ -1733,3 +1733,164 @@ body::before {
     display: none;
   }
 }
+
+/* ============================================
+   THEME TOGGLE BUTTON
+   ============================================ */
+.theme-toggle {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  margin-left: 6px;
+  transition: background var(--dur) var(--ease), color var(--dur) var(--ease);
+}
+.theme-toggle:hover {
+  background: rgba(0,0,0,0.06);
+  color: var(--text-primary);
+}
+.theme-toggle:focus-visible {
+  outline: 2px solid var(--accent-blue);
+  outline-offset: 2px;
+}
+[data-theme="dark"] .theme-toggle:hover {
+  background: rgba(255,255,255,0.07);
+}
+
+.theme-icon {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  transition: opacity 0.25s var(--ease), transform 0.25s var(--ease);
+}
+/* Light mode: sun visible, moon hidden */
+.theme-icon--sun  { opacity: 1; transform: rotate(0deg) scale(1); }
+.theme-icon--moon { opacity: 0; transform: rotate(90deg) scale(0.5); }
+/* Dark mode: moon visible, sun hidden */
+[data-theme="dark"] .theme-icon--sun  { opacity: 0; transform: rotate(-90deg) scale(0.5); }
+[data-theme="dark"] .theme-icon--moon { opacity: 1; transform: rotate(0deg) scale(1); }
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+
+/* Color-scheme hint for native browser UI (scrollbars, form controls) */
+:root                  { color-scheme: light; }
+[data-theme="dark"]    { color-scheme: dark;  }
+
+[data-theme="dark"] {
+  --bg: #0F0F0F;
+  --surface: #1A1A1A;
+  --text-primary: #F0F0F0;
+  --text-secondary: #9A9A9A;
+  --text-tertiary: #888888;
+  --accent-blue: #3B82F6;
+  --border: rgba(255, 255, 255, 0.08);
+
+  /* Glass — dark surfaces with faint white sheen */
+  --glass-bg: rgba(255, 255, 255, 0.05);
+  --glass-bg-strong: rgba(255, 255, 255, 0.07);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --glass-border-subtle: rgba(255, 255, 255, 0.08);
+  --glass-inset: inset 0 1px 0 rgba(255,255,255,0.08), inset 0 -1px 0 rgba(0,0,0,0.30);
+
+  /* Shadows — deeper on dark backgrounds */
+  --shadow-xs: 0 1px 3px rgba(0,0,0,0.40), 0 1px 2px rgba(0,0,0,0.30);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.50), 0 1px 3px rgba(0,0,0,0.35);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.60), 0 2px 8px rgba(0,0,0,0.40);
+  --shadow-lg: 0 16px 48px rgba(0,0,0,0.70), 0 4px 16px rgba(0,0,0,0.45);
+  --shadow-xl: 0 32px 80px rgba(0,0,0,0.80), 0 8px 24px rgba(0,0,0,0.50);
+}
+
+/* Ambient gradients — more vibrant in dark mode */
+[data-theme="dark"] body::before {
+  background:
+    radial-gradient(ellipse 55% 45% at 8%  8%,  rgba(99,102,241,0.14)  0%, transparent 65%),
+    radial-gradient(ellipse 45% 55% at 92% 12%, rgba(96,165,250,0.12)  0%, transparent 65%),
+    radial-gradient(ellipse 65% 45% at 50% 98%, rgba(20,184,166,0.10)  0%, transparent 65%),
+    radial-gradient(ellipse 40% 40% at 78% 62%, rgba(251,146,60,0.08)  0%, transparent 65%);
+}
+
+/* Nav hover states */
+[data-theme="dark"] .nav-links a:hover,
+[data-theme="dark"] .nav-links a.active { background: rgba(255,255,255,0.07); }
+[data-theme="dark"] .nav-mobile a:hover { background: rgba(255,255,255,0.05); }
+[data-theme="dark"] .nav-toggle:hover   { background: rgba(255,255,255,0.06); }
+
+/* Primary button — near-white bg needs dark text */
+[data-theme="dark"] .btn-primary {
+  background: #F0F0F0;
+  color: #0A0A0A;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.50), inset 0 1px 0 rgba(255,255,255,0.20);
+}
+[data-theme="dark"] .btn-primary:hover {
+  box-shadow: 0 8px 28px rgba(0,0,0,0.60), inset 0 1px 0 rgba(255,255,255,0.20);
+}
+
+/* Project cards */
+[data-theme="dark"] .project-card      { border-color: rgba(255,255,255,0.08); }
+[data-theme="dark"] .project-arrow     { background: rgba(255,255,255,0.08); }
+[data-theme="dark"] .project-card:hover .project-arrow {
+  background: #F0F0F0;
+  color: #0A0A0A;
+}
+
+/* Tags */
+[data-theme="dark"] .tag {
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.08);
+  color: var(--text-secondary);
+}
+
+/* Social icon hover */
+[data-theme="dark"] .social-icon-btn:hover { background: rgba(255,255,255,0.12); }
+
+/* Footer separator */
+[data-theme="dark"] .footer { border-top: 1px solid rgba(255,255,255,0.06); }
+
+/* ============================================
+   IMESSAGE — Dark mode = light iOS phone
+   (dark phone on light page → light phone on dark page)
+   ============================================ */
+[data-theme="dark"] .imsg-window {
+  background: #F2F2F7;
+  box-shadow:
+    0 0 0 1px rgba(0,0,0,0.10),
+    0 40px 80px rgba(0,0,0,0.60),
+    0 16px 40px rgba(0,0,0,0.40);
+}
+[data-theme="dark"] .imsg-time          { color: #000; }
+[data-theme="dark"] .imsg-status-icons svg { filter: invert(1); }
+[data-theme="dark"] .imsg-header        { border-bottom-color: rgba(0,0,0,0.12); }
+[data-theme="dark"] .imsg-cluster-img   { border-color: #F2F2F7; }
+[data-theme="dark"] .imsg-group-name    { color: #000; }
+[data-theme="dark"] .imsg-member-count  { color: #6E6E73; }
+[data-theme="dark"] .imsg-date-sep      { color: #6E6E73; }
+[data-theme="dark"] .imsg-sender-name   { color: #6E6E73; }
+[data-theme="dark"] .imsg-bubble--in {
+  background: #E5E5EA;
+  color: #000;
+}
+[data-theme="dark"] .imsg-credit        { color: rgba(0,0,0,0.45); }
+[data-theme="dark"] .imsg-delivered     { color: #6E6E73; }
+[data-theme="dark"] .imsg-typing-dots   { background: #E5E5EA; }
+[data-theme="dark"] .imsg-typing-dots span { background: rgba(0,0,0,0.35); }
+[data-theme="dark"] .imsg-input-bar {
+  background: #EBEBF0;
+  border-top-color: rgba(0,0,0,0.10);
+}
+[data-theme="dark"] .imsg-input-pill {
+  background: #FFFFFF;
+  border-color: rgba(0,0,0,0.10);
+}
+[data-theme="dark"] .imsg-input-placeholder { color: #AEAEB2; }
+/* Invert the decorative input bar icons (they use hardcoded white fills) */
+[data-theme="dark"] .imsg-input-icon svg { filter: invert(1) opacity(0.55); }

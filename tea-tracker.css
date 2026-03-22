@@ -125,6 +125,7 @@
   color: #000;
   line-height: 1;
 }
+[data-theme="dark"] .tea-speaker-name { color: var(--text-primary); }
 
 /* ---- STATUS MESSAGE ---- */
 .tea-status-msg {
