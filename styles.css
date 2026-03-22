@@ -1588,7 +1588,6 @@ body::before {
   .testimonial-text { font-size: 15px; }
   .testimonial-quote-mark { font-size: 64px; }
 
-  .speech-bubble { right: -80px; }
 }
 
 /* ============================================
@@ -1669,6 +1668,10 @@ body::before {
 /* Zoom-out dismiss */
 .speech-bubble.is-fading {
   animation: bubble-pop-out 0.5s cubic-bezier(0.4, 0, 0.6, 1) forwards;
+}
+
+@media (max-width: 600px) {
+  .speech-bubble { right: -80px; }
 }
 
 
