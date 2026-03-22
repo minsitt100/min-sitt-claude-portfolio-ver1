@@ -90,21 +90,75 @@
     });
   });
 
-  /* --- Testimonials scroll controls --- */
-  var testimonialsTrack = document.getElementById('testimonialsTrack');
-  var scrollLeftBtn = document.getElementById('testimonialsScrollLeft');
-  var scrollRightBtn = document.getElementById('testimonialsScrollRight');
+  /* --- iMessage chat animation --- */
+  var imsgWindow = document.getElementById('imsgWindow');
+  var imsgBody   = document.getElementById('imsgBody');
 
-  if (testimonialsTrack && scrollLeftBtn && scrollRightBtn) {
-    var cardStep = 396; // card width (380) + gap (16)
+  if (imsgWindow && imsgBody) {
+    var chatStarted = false;
 
-    scrollLeftBtn.addEventListener('click', function () {
-      testimonialsTrack.scrollBy({ left: -cardStep, behavior: 'smooth' });
-    });
+    function showRow(id) {
+      var el = document.getElementById(id);
+      if (!el) return;
+      el.classList.remove('imsg-row--hidden');
+      el.offsetHeight; // force reflow so animation triggers
+      el.classList.add('imsg-row--visible');
+      setTimeout(function () {
+        imsgBody.scrollTop = imsgBody.scrollHeight;
+      }, 40);
+    }
 
-    scrollRightBtn.addEventListener('click', function () {
-      testimonialsTrack.scrollBy({ left: cardStep, behavior: 'smooth' });
-    });
+    function hideRow(id) {
+      var el = document.getElementById(id);
+      if (el) el.classList.add('imsg-row--hidden');
+    }
+
+    function startChat() {
+      if (chatStarted) return;
+      chatStarted = true;
+
+      // Roylan typing → message
+      showRow('imsgTyping0');
+      setTimeout(function () {
+        hideRow('imsgTyping0');
+        showRow('imsgMsg0');
+
+        // Will typing → message
+        setTimeout(function () {
+          showRow('imsgTyping1');
+          setTimeout(function () {
+            hideRow('imsgTyping1');
+            showRow('imsgMsg1');
+
+            // Vikas typing → message
+            setTimeout(function () {
+              showRow('imsgTyping2');
+              setTimeout(function () {
+                hideRow('imsgTyping2');
+                showRow('imsgMsg2');
+
+                // My reply
+                setTimeout(function () {
+                  showRow('imsgReply');
+                }, 1000);
+
+              }, 1600);
+            }, 600);
+          }, 1600);
+        }, 700);
+      }, 1600);
+    }
+
+    var chatObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          startChat();
+          chatObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.25 });
+
+    chatObserver.observe(imsgWindow);
   }
 
   /* --- Speech bubble on headshot --- */

@@ -210,73 +210,125 @@
         </div>
       </div>
 
-      <div class="testimonials-scroll-wrapper">
-        <div class="testimonials-track" id="testimonialsTrack">
-
-          <!-- 01 — Matador -->
-          <article class="testimonial-card fade-up">
-            <span class="testimonial-quote-mark" aria-hidden="true">&ldquo;</span>
-            <p class="testimonial-text">It's opening up doors for us in our discussions with investors and they like the MVP. We know that it took everyone to be on their game to make a great product.</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar testimonial-avatar--health">
-                <img src="assets/images/RoylanShaffHeadshot.jpeg" alt="Roylan Shaff" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-              </div>
-              <div class="testimonial-author-info">
-                <span class="testimonial-name">Roylan Shaff</span>
-                <span class="testimonial-role">Founder &amp; CEO</span>
-                <span class="testimonial-project">Matador</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 02 — Arrow North Design -->
-          <article class="testimonial-card fade-up delay-1">
-            <span class="testimonial-quote-mark" aria-hidden="true">&ldquo;</span>
-            <p class="testimonial-text">Collaborating with Min has been an incredible experience. He embraced uncertainty and consistently asked questions whenever the next steps were unclear. He is eager for new challenges and will remain a valuable asset to any company, large or small.</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar testimonial-avatar--stp">
-                <img src="assets/images/WillBreenHeadshot.jpeg" alt="Will Breen" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-              </div>
-              <div class="testimonial-author-info">
-                <span class="testimonial-name">Will Breen</span>
-                <span class="testimonial-role">CEO</span>
-                <span class="testimonial-project">Arrow North Design</span>
-              </div>
-            </div>
-          </article>
-
-          <!-- 03 — Nomify -->
-          <article class="testimonial-card fade-up delay-2">
-            <span class="testimonial-quote-mark" aria-hidden="true">&ldquo;</span>
-            <p class="testimonial-text">Min Sitt had a genuine hand in one of our most meaningful early bets — a pre-stay check-in that turned guest survey responses into personalized amenity recommendations. He pushed the concept further than we expected, and his thinking is still baked into how the product works today.</p>
-            <div class="testimonial-author">
-              <div class="testimonial-avatar testimonial-avatar--curiocity">
-                <img src="assets/images/VikasHeadshot.jpeg" alt="Vikas Bhetanabhotla" style="width:100%;height:100%;object-fit:cover;border-radius:50%;">
-              </div>
-              <div class="testimonial-author-info">
-                <span class="testimonial-name">Vikas Bhetanabhotla</span>
-                <span class="testimonial-role">CEO</span>
-                <span class="testimonial-project">Nomify</span>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-
-      <!-- Scroll navigation -->
+      <!-- iMessage Group Chat -->
       <div class="container">
-        <div class="testimonials-nav">
-          <button class="testimonials-nav-btn" id="testimonialsScrollLeft" aria-label="Previous testimonials">
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M10 13L5 8l5-5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
-          <button class="testimonials-nav-btn" id="testimonialsScrollRight" aria-label="Next testimonials">
-            <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-              <path d="M6 3l5 5-5 5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </button>
+        <div class="imsg-window fade-up" id="imsgWindow">
+
+          <!-- Status bar -->
+          <div class="imsg-status-bar">
+            <span class="imsg-time">9:41</span>
+            <div class="imsg-status-icons">
+              <svg width="17" height="12" viewBox="0 0 17 12" fill="white" aria-hidden="true"><rect x="0" y="7" width="3" height="5" rx="0.5"/><rect x="4.5" y="4.5" width="3" height="7.5" rx="0.5"/><rect x="9" y="2" width="3" height="10" rx="0.5"/><rect x="13.5" y="0" width="3" height="12" rx="0.5"/></svg>
+              <svg width="16" height="12" viewBox="0 0 16 12" fill="none" aria-hidden="true"><circle cx="8" cy="11" r="1.5" fill="white"/><path d="M4.5 7.5a5 5 0 0 1 7 0" stroke="white" stroke-width="1.5" stroke-linecap="round"/><path d="M1.5 4a10 10 0 0 1 13 0" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>
+              <svg width="25" height="12" viewBox="0 0 25 12" fill="none" aria-hidden="true"><rect x="0.5" y="0.5" width="21" height="11" rx="3.5" stroke="white" stroke-opacity="0.35"/><rect x="2" y="2" width="17" height="8" rx="2" fill="white"/><path d="M23 4v4a2 2 0 0 0 0-4z" fill="white" fill-opacity="0.4"/></svg>
+            </div>
+          </div>
+
+          <!-- Chat header -->
+          <div class="imsg-header">
+            <button class="imsg-back" aria-label="Back">
+              <svg width="10" height="17" viewBox="0 0 10 17" fill="none" aria-hidden="true"><path d="M9 1L1.5 8.5 9 16" stroke="#007AFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span>Messages</span>
+            </button>
+            <div class="imsg-header-center">
+              <div class="imsg-cluster">
+                <img src="assets/images/RoylanShaffHeadshot.jpeg" alt="" class="imsg-cluster-img imsg-cluster-img--1">
+                <img src="assets/images/WillBreenHeadshot.jpeg"   alt="" class="imsg-cluster-img imsg-cluster-img--2">
+                <img src="assets/images/VikasHeadshot.jpeg"       alt="" class="imsg-cluster-img imsg-cluster-img--3">
+              </div>
+              <span class="imsg-group-name">Happy Clients</span>
+              <span class="imsg-member-count">3 people</span>
+            </div>
+            <div class="imsg-header-actions">
+              <button class="imsg-icon-btn" aria-label="Video call">
+                <svg width="22" height="16" viewBox="0 0 22 16" fill="none" aria-hidden="true"><rect x="0.5" y="0.5" width="13" height="15" rx="3.5" stroke="#007AFF" stroke-width="1.5"/><path d="M14 5l7.5-3.5v13L14 11V5z" fill="#007AFF"/></svg>
+              </button>
+              <button class="imsg-icon-btn" aria-label="Phone call">
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true"><path d="M16.5 12.9l-2.8-1.2a1.5 1.5 0 0 0-1.7.4l-1.1 1.3A11.5 11.5 0 0 1 5.6 7l1.3-1.1a1.5 1.5 0 0 0 .4-1.7L6.1 1.5A1.5 1.5 0 0 0 4.4.6L1.8 1.3A1.5 1.5 0 0 0 .75 2.8C1.6 10.5 7.5 16.4 15.2 17.25a1.5 1.5 0 0 0 1.5-1.05l.7-2.6a1.5 1.5 0 0 0-.9-1.7z" fill="#007AFF"/></svg>
+              </button>
+            </div>
+          </div>
+
+          <!-- Chat body -->
+          <div class="imsg-body" id="imsgBody">
+            <div class="imsg-date-sep">Today</div>
+
+            <!-- Typing: Roylan -->
+            <div class="imsg-row imsg-row--in imsg-row--hidden" id="imsgTyping0">
+              <img class="imsg-avatar-sm" src="assets/images/RoylanShaffHeadshot.jpeg" alt="">
+              <div class="imsg-typing-dots"><span></span><span></span><span></span></div>
+            </div>
+
+            <!-- Message 1: Roylan -->
+            <div class="imsg-row imsg-row--in imsg-row--hidden" id="imsgMsg0">
+              <img class="imsg-avatar-sm" src="assets/images/RoylanShaffHeadshot.jpeg" alt="">
+              <div class="imsg-col">
+                <span class="imsg-sender-name">Roylan</span>
+                <div class="imsg-bubble imsg-bubble--in">
+                  It&#x2019;s opening up doors for us in our discussions with investors and they like the MVP. We know that it took everyone to be on their game to make a great product.
+                  <span class="imsg-credit">Roylan Shaff &middot; Founder &amp; CEO, Matador</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Typing: Will -->
+            <div class="imsg-row imsg-row--in imsg-row--hidden" id="imsgTyping1">
+              <img class="imsg-avatar-sm" src="assets/images/WillBreenHeadshot.jpeg" alt="">
+              <div class="imsg-typing-dots"><span></span><span></span><span></span></div>
+            </div>
+
+            <!-- Message 2: Will -->
+            <div class="imsg-row imsg-row--in imsg-row--hidden" id="imsgMsg1">
+              <img class="imsg-avatar-sm" src="assets/images/WillBreenHeadshot.jpeg" alt="">
+              <div class="imsg-col">
+                <span class="imsg-sender-name">Will</span>
+                <div class="imsg-bubble imsg-bubble--in">
+                  Collaborating with Min has been an incredible experience. He embraced uncertainty and consistently asked questions whenever the next steps were unclear. He is eager for new challenges and will remain a valuable asset to any company, large or small.
+                  <span class="imsg-credit">Will Breen &middot; CEO, Arrow North Design</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Typing: Vikas -->
+            <div class="imsg-row imsg-row--in imsg-row--hidden" id="imsgTyping2">
+              <img class="imsg-avatar-sm" src="assets/images/VikasHeadshot.jpeg" alt="">
+              <div class="imsg-typing-dots"><span></span><span></span><span></span></div>
+            </div>
+
+            <!-- Message 3: Vikas -->
+            <div class="imsg-row imsg-row--in imsg-row--hidden" id="imsgMsg2">
+              <img class="imsg-avatar-sm" src="assets/images/VikasHeadshot.jpeg" alt="">
+              <div class="imsg-col">
+                <span class="imsg-sender-name">Vikas</span>
+                <div class="imsg-bubble imsg-bubble--in">
+                  Min Sitt had a genuine hand in one of our most meaningful early bets &#x2014; a pre-stay check-in that turned guest survey responses into personalized amenity recommendations. He pushed the concept further than we expected, and his thinking is still baked into how the product works today.
+                  <span class="imsg-credit">Vikas Bhetanabhotla &middot; CEO, Nomify</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- My reply -->
+            <div class="imsg-row imsg-row--out imsg-row--hidden" id="imsgReply">
+              <div class="imsg-col imsg-col--out">
+                <div class="imsg-bubble imsg-bubble--out">Great working with you all!</div>
+                <span class="imsg-delivered">Delivered</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Input bar (decorative) -->
+          <div class="imsg-input-bar">
+            <button class="imsg-input-icon" aria-hidden="true" tabindex="-1">
+              <svg width="30" height="30" viewBox="0 0 30 30" fill="none"><circle cx="15" cy="15" r="14" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/><path d="M15 9v12M9 15h12" stroke="rgba(255,255,255,0.45)" stroke-width="2" stroke-linecap="round"/></svg>
+            </button>
+            <div class="imsg-input-pill">
+              <span class="imsg-input-placeholder">iMessage</span>
+            </div>
+            <button class="imsg-input-icon" aria-hidden="true" tabindex="-1">
+              <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect x="10" y="2" width="8" height="14" rx="4" fill="rgba(255,255,255,0.35)"/><path d="M6 12a8 8 0 0 0 16 0" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-linecap="round" fill="none"/><line x1="14" y1="20" x2="14" y2="25" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-linecap="round"/><line x1="10" y1="25" x2="18" y2="25" stroke="rgba(255,255,255,0.35)" stroke-width="1.5" stroke-linecap="round"/></svg>
+            </button>
+          </div>
+
         </div>
       </div>
 
