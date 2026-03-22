@@ -1588,7 +1588,7 @@ body::before {
   .testimonial-text { font-size: 15px; }
   .testimonial-quote-mark { font-size: 64px; }
 
-  .speech-bubble { right: -48px; }
+  .speech-bubble { right: -80px; }
 }
 
 /* ============================================
