@@ -1507,14 +1507,14 @@ body::before {
 
 .speech-bubble {
   position: absolute;
-  top: -12px;
-  right: -24px;
-  background: var(--surface);
-  border: 1.5px solid rgba(0, 0, 0, 0.12);
-  border-radius: 14px;
+  top: -14px;
+  right: -28px;
+  background: #1C7AF5; /* iMessage blue */
+  border: none;
+  border-radius: 20px 20px 20px 6px; /* iMessage sender bubble shape */
   padding: 10px 16px;
   white-space: nowrap;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 16px rgba(28, 122, 245, 0.35);
   z-index: 10;
   pointer-events: none;
 
@@ -1525,37 +1525,31 @@ body::before {
   transition: opacity 0.3s ease, transform 0s;
 }
 
-/* Triangular tail */
+/* iMessage-style tail — small teardrop at bottom-left */
 .speech-bubble::after {
   content: '';
   position: absolute;
-  bottom: -8px;
-  left: 24px;
-  width: 16px;
-  height: 16px;
-  background: var(--surface);
-  border-right: 1.5px solid rgba(0, 0, 0, 0.12);
-  border-bottom: 1.5px solid rgba(0, 0, 0, 0.12);
-  transform: rotate(45deg);
-  border-radius: 0 0 3px 0;
+  bottom: -7px;
+  left: 10px;
+  width: 14px;
+  height: 14px;
+  background: #1C7AF5;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  border-radius: 0 0 0 3px;
 }
 
 .speech-bubble-text {
   font-family: var(--font);
   font-size: 14px;
   font-weight: 500;
-  color: var(--text-primary);
+  color: #ffffff;
+  letter-spacing: 0.01em;
 }
 
-.speech-bubble-sub {
-  color: var(--text-secondary);
-  font-weight: 400;
-}
-
-/* Sway animation */
+/* Sway animation — keeps scale(1) so blue bg stays solid */
 @keyframes bubble-sway {
   0%, 100% { transform: scale(1) rotate(-2deg); }
-  50% { transform: scale(1) rotate(2deg); }
+  50%       { transform: scale(1) rotate(2deg); }
 }
 
 /* Pop-in animation */
