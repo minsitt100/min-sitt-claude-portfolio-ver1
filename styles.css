@@ -1497,3 +1497,163 @@ body::before {
   .testimonial-text { font-size: 15px; }
   .testimonial-quote-mark { font-size: 64px; }
 }
+
+/* ============================================
+   SPEECH BUBBLE — Headshot micro-interaction
+   ============================================ */
+.hero-photo-wrap {
+  position: relative;
+}
+
+.speech-bubble {
+  position: absolute;
+  top: -12px;
+  right: -24px;
+  background: var(--surface);
+  border: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-radius: 14px;
+  padding: 10px 16px;
+  white-space: nowrap;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  z-index: 10;
+  pointer-events: none;
+
+  /* Hidden by default */
+  opacity: 0;
+  transform: scale(0);
+  transform-origin: bottom left;
+  transition: opacity 0.3s ease, transform 0s;
+}
+
+/* Triangular tail */
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 24px;
+  width: 16px;
+  height: 16px;
+  background: var(--surface);
+  border-right: 1.5px solid rgba(0, 0, 0, 0.12);
+  border-bottom: 1.5px solid rgba(0, 0, 0, 0.12);
+  transform: rotate(45deg);
+  border-radius: 0 0 3px 0;
+}
+
+.speech-bubble-text {
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.speech-bubble-sub {
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+/* Sway animation */
+@keyframes bubble-sway {
+  0%, 100% { transform: scale(1) rotate(-2deg); }
+  50% { transform: scale(1) rotate(2deg); }
+}
+
+/* Pop-in animation */
+@keyframes bubble-pop-in {
+  0% { opacity: 0; transform: scale(0); }
+  60% { opacity: 1; transform: scale(1.08); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+/* Active state — applied via JS */
+.speech-bubble.is-visible {
+  opacity: 1;
+  transform: scale(1);
+  animation: bubble-pop-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+             bubble-sway 2.5s ease-in-out 0.4s infinite;
+}
+
+/* Fade-out transition */
+.speech-bubble.is-fading {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: bubble-sway 2.5s ease-in-out infinite;
+}
+
+/* Hover re-trigger — desktop only */
+@media (hover: hover) {
+  .hero-photo-wrap:hover .speech-bubble.hover-enabled {
+    opacity: 1;
+    transform: scale(1);
+    animation: bubble-pop-in 0.4s cubic-bezier(0.34, 1.56, 0.64, 1) forwards,
+               bubble-sway 2.5s ease-in-out 0.4s infinite;
+  }
+  .hero-photo-wrap:not(:hover) .speech-bubble.hover-enabled {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+}
+
+/* ============================================
+   IDLE NUDGE — Scroll prompt
+   ============================================ */
+.idle-nudge {
+  position: fixed;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--glass-bg);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  border: 1px solid var(--glass-border-subtle);
+  border-radius: 100px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  z-index: 100;
+  cursor: pointer;
+
+  /* Hidden by default */
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.idle-nudge.is-visible {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+.idle-nudge.is-dismissed {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-50%) translateY(20px);
+}
+
+.idle-nudge-text {
+  font-family: var(--font);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+@keyframes nudge-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(4px); }
+}
+
+.idle-nudge-arrow {
+  animation: nudge-bounce 1.2s ease-in-out infinite;
+  color: var(--text-secondary);
+}
+
+/* Hide nudge on mobile */
+@media (max-width: 768px) {
+  .idle-nudge {
+    display: none;
+  }
+}

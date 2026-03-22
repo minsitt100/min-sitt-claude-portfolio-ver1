@@ -107,6 +107,71 @@
     });
   }
 
+  /* --- Speech bubble on headshot --- */
+  var bubble = document.querySelector('.speech-bubble');
+  var photoWrap = document.querySelector('.hero-photo-wrap');
+
+  if (bubble && photoWrap) {
+    // Initial auto-popup after 2s
+    setTimeout(function () {
+      bubble.classList.add('is-visible');
+
+      // Fade out after 4s
+      setTimeout(function () {
+        bubble.classList.remove('is-visible');
+        bubble.classList.add('is-fading');
+
+        // After fade completes, enable hover mode
+        setTimeout(function () {
+          bubble.classList.remove('is-fading');
+          bubble.classList.add('hover-enabled');
+        }, 400);
+      }, 4000);
+    }, 2000);
+  }
+
+  /* --- Idle nudge toward work section --- */
+  var idleNudge = document.getElementById('idleNudge');
+  var workSection = document.getElementById('work');
+
+  if (idleNudge && workSection) {
+    var nudgeDismissed = false;
+    var nudgeShown = false;
+
+    // Observe when #work enters viewport
+    var workObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting && !nudgeDismissed) {
+          nudgeDismissed = true;
+          idleNudge.classList.remove('is-visible');
+          idleNudge.classList.add('is-dismissed');
+          workObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.1 });
+
+    workObserver.observe(workSection);
+
+    // Show nudge after 8s if user hasn't scrolled to work
+    setTimeout(function () {
+      if (!nudgeDismissed && !nudgeShown) {
+        nudgeShown = true;
+        idleNudge.classList.add('is-visible');
+      }
+    }, 8000);
+
+    // Clicking nudge smooth-scrolls and dismisses
+    idleNudge.addEventListener('click', function (e) {
+      e.preventDefault();
+      nudgeDismissed = true;
+      idleNudge.classList.remove('is-visible');
+      idleNudge.classList.add('is-dismissed');
+      var navHeight = document.querySelector('.nav') ? 88 : 0;
+      var top = workSection.getBoundingClientRect().top + window.scrollY - navHeight - 24;
+      window.scrollTo({ top: top, behavior: 'smooth' });
+    });
+  }
+
   /* --- Active nav link highlight on scroll --- */
   var sections = document.querySelectorAll('section[id]');
   var navLinks = document.querySelectorAll('.nav-links a, .nav-mobile a');
