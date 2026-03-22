@@ -1587,6 +1587,8 @@ body::before {
   .testimonial-card { width: 300px; padding: 24px; }
   .testimonial-text { font-size: 15px; }
   .testimonial-quote-mark { font-size: 64px; }
+
+  .speech-bubble { right: -48px; }
 }
 
 /* ============================================
