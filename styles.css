@@ -1174,8 +1174,7 @@ body::before {
 }
 
 .testimonials-section-header {
-  border-bottom: none;
-  padding-bottom: 0;
+  padding-bottom: 20px;
   margin-bottom: 48px;
 }
 
