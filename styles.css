@@ -508,7 +508,8 @@ body::before {
 
 /* Project Card — Liquid Glass */
 .project-card {
-  display: block;
+  display: flex;
+  flex-direction: column;
   border-radius: var(--r-xl);
   overflow: hidden;
   text-decoration: none;
@@ -556,6 +557,7 @@ body::before {
 
 /* Info panel */
 .project-info {
+  flex: 1;
   padding: 24px 28px;
   position: relative;
   padding-right: 80px;
